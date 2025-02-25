@@ -1,9 +1,10 @@
+
 import React from "react";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 const Index = () => {
   const phoneNumber = "5567991000575";
-  const address = "Av. Afonso Pena, 4496 - Sala 1305, Campo Grande - MS";
+  const address = "Av. Afonso Pena, 4496 - Sala 1305\nCampo Grande - MS";
   
   const handleWhatsAppClick = (message: string = "") => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -96,6 +97,7 @@ const Index = () => {
                   icon={<MapPin />} 
                   title="Localização" 
                   content={address}
+                  multiline
                 />
                 <ContactInfo 
                   icon={<Phone />} 
@@ -110,7 +112,7 @@ const Index = () => {
               <div className="flex items-center justify-center opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <button 
                   onClick={() => handleWhatsAppClick()}
-                  className="w-full bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
+                  className="w-fit bg-primary text-background px-8 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
                 >
                   Entrar em Contato
                 </button>
@@ -162,13 +164,15 @@ const ContactInfo = ({
   title, 
   content,
   onClick,
-  className = ""
+  className = "",
+  multiline = false
 }: { 
   icon: React.ReactNode; 
   title: string; 
   content: string;
   onClick?: () => void;
   className?: string;
+  multiline?: boolean;
 }) => (
   <div 
     className={`flex items-start space-x-4 ${className}`}
@@ -177,7 +181,7 @@ const ContactInfo = ({
     <div className="text-primary">{icon}</div>
     <div>
       <h4 className="font-nicholas text-primary text-2xl">{title}</h4>
-      <p className="text-accent-dark">{content}</p>
+      <p className="text-accent-dark whitespace-pre-line">{content}</p>
     </div>
   </div>
 );
