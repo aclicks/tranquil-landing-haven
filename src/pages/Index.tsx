@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, MessageSquare } from "lucide-react";
 
 const Index = () => {
   const phoneNumber = "5567991000575";
@@ -112,9 +112,10 @@ const Index = () => {
               <div className="flex items-center justify-center opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <button 
                   onClick={() => handleWhatsAppClick()}
-                  className="w-fit bg-primary text-background px-8 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
+                  className="w-fit bg-[#25D366] text-white px-8 py-3 rounded-lg hover:bg-[#20BD5B] transition-colors duration-300 flex items-center gap-2"
                 >
-                  Entrar em Contato
+                  <MessageSquare className="w-5 h-5" />
+                  Enviar mensagem por WhatsApp
                 </button>
               </div>
             </div>
