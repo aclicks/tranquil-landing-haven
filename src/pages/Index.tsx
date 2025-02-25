@@ -104,47 +104,17 @@ const Index = () => {
                   onClick={() => handleWhatsAppClick()}
                   className="cursor-pointer hover:text-accent transition-colors"
                 />
-                <ContactInfo icon={<Mail />} title="E-mail" content="contato@drcasquer.com" />
+                <ContactInfo icon={<Mail />} title="E-mail" content="matheusscasquer@gmail.com" />
                 <ContactInfo icon={<Clock />} title="Horário" content="Seg-Sex: 9:00 - 17:00" />
               </div>
-              <form 
-                className="space-y-4 opacity-0 animate-fade-up" 
-                style={{ animationDelay: "0.3s" }}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.currentTarget);
-                  const message = `Nome: ${formData.get('name')}\nE-mail: ${formData.get('email')}\nMensagem: ${formData.get('message')}`;
-                  handleWhatsAppClick(message);
-                }}
-              >
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Seu Nome"
-                  className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                  required
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Seu E-mail"
-                  className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Sua Mensagem"
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                  required
-                ></textarea>
+              <div className="flex items-center justify-center opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <button 
-                  type="submit"
+                  onClick={() => handleWhatsAppClick()}
                   className="w-full bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
                 >
-                  Enviar Mensagem
+                  Entrar em Contato
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -206,7 +176,7 @@ const ContactInfo = ({
   >
     <div className="text-primary">{icon}</div>
     <div>
-      <h4 className="font-nicholas text-primary">{title}</h4>
+      <h4 className="font-nicholas text-primary text-2xl">{title}</h4>
       <p className="text-accent-dark">{content}</p>
     </div>
   </div>
