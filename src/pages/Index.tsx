@@ -73,11 +73,11 @@ const Index = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up"
+                className="bg-primary/80 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up border border-[#FDE1D3]/10"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <h4 className="text-xl font-nicholas text-primary mb-3">{service.title}</h4>
-                <p className="text-accent-dark">{service.description}</p>
+                <h4 className="text-xl font-nicholas text-[#FDE1D3] mb-3">{service.title}</h4>
+                <p className="text-[#FDE1D3]/90">{service.description}</p>
               </div>
             ))}
           </div>
@@ -109,22 +109,10 @@ const Index = () => {
                 <ContactInfo icon={<Mail />} title="E-mail" content="matheusscasquer@gmail.com" />
                 <ContactInfo icon={<Clock />} title="Horário" content="Seg-Sex: 9:00 - 17:00" />
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="h-[300px] w-full opacity-0 animate-fade-up rounded-lg overflow-hidden shadow-lg" style={{ animationDelay: "0.3s" }}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.8008413887287!2d-54.61912392374866!3d-20.4621245572989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e89c22fc5555%3A0x4b3947915336767b!2sAv.%20Afonso%20Pena%2C%204496%20-%20Jardim%20dos%20Estados%2C%20Campo%20Grande%20-%20MS%2C%2079020-001!5e0!3m2!1sen!2sbr!4v1710526428443!5m2!1sen!2sbr"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
+              <div className="flex items-center justify-center opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <button 
                   onClick={() => handleWhatsAppClick()}
-                  className="w-fit bg-[#25D366] text-white px-8 py-3 rounded-lg hover:bg-[#20BD5B] transition-colors duration-300 flex items-center gap-2 opacity-0 animate-fade-up mx-auto"
-                  style={{ animationDelay: "0.4s" }}
+                  className="w-fit bg-[#25D366] text-white px-8 py-3 rounded-lg hover:bg-[#20BD5B] transition-colors duration-300 flex items-center gap-2"
                 >
                   <MessageSquare className="w-5 h-5" />
                   Enviar mensagem por WhatsApp
