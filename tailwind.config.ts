@@ -22,7 +22,7 @@ export default {
         background: "#F1EAE0",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["nicholas", "sans-serif"],
         display: ["Playfair Display", "serif"],
       },
       keyframes: {
