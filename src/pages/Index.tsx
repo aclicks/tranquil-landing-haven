@@ -64,20 +64,20 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-primary">
+      <section id="services" className="py-20">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-nicholas text-[#FDE1D3] mb-12 text-center opacity-0 animate-fade-up">
+          <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
             Serviços Oferecidos
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-primary/80 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up border border-[#FDE1D3]/10"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <h4 className="text-xl font-nicholas text-[#FDE1D3] mb-3">{service.title}</h4>
-                <p className="text-[#FDE1D3]/90">{service.description}</p>
+                <h4 className="text-xl font-nicholas text-primary mb-3">{service.title}</h4>
+                <p className="text-accent-dark">{service.description}</p>
               </div>
             ))}
           </div>
