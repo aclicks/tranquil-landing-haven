@@ -8,7 +8,7 @@ const Index = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b border-primary/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-primary font-display text-2xl">Dr. Matheus Casquer</h1>
+          <h1 className="text-primary font-nicholas text-2xl">Dr. Matheus Casquer</h1>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-primary hover:text-accent transition-colors">About</a>
             <a href="#services" className="text-primary hover:text-accent transition-colors">Services</a>
@@ -21,7 +21,7 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-up">
-            <h2 className="text-4xl md:text-6xl font-display text-primary leading-tight">
+            <h2 className="text-4xl md:text-6xl font-nicholas text-primary leading-tight">
               Professional Psychiatric Care for Your Mental Well-being
             </h2>
             <p className="text-accent text-lg md:text-xl mt-4">
@@ -41,7 +41,7 @@ const Index = () => {
       <section id="about" className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-display text-primary mb-8 opacity-0 animate-fade-up">
+            <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
               About Dr. Matheus Casquer
             </h3>
             <div className="prose prose-lg text-accent-dark opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -58,7 +58,7 @@ const Index = () => {
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-display text-primary mb-12 text-center opacity-0 animate-fade-up">
+          <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
             Services Offered
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,7 +68,7 @@ const Index = () => {
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <h4 className="text-xl font-display text-primary mb-3">{service.title}</h4>
+                <h4 className="text-xl font-nicholas text-primary mb-3">{service.title}</h4>
                 <p className="text-accent-dark">{service.description}</p>
               </div>
             ))}
@@ -80,7 +80,7 @@ const Index = () => {
       <section id="contact" className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-display text-primary mb-12 text-center opacity-0 animate-fade-up">
+            <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
               Get in Touch
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
@@ -156,7 +156,7 @@ const ContactInfo = ({ icon, title, content }: { icon: React.ReactNode; title: s
   <div className="flex items-start space-x-4">
     <div className="text-primary">{icon}</div>
     <div>
-      <h4 className="font-display text-primary">{title}</h4>
+      <h4 className="font-nicholas text-primary">{title}</h4>
       <p className="text-accent-dark">{content}</p>
     </div>
   </div>

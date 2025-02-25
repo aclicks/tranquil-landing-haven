@@ -22,7 +22,8 @@ export default {
         background: "#F1EAE0",
       },
       fontFamily: {
-        sans: ["nicholas", "sans-serif"],
+        sans: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        nicholas: ["nicholas", "sans-serif"],
         display: ["Playfair Display", "serif"],
       },
       keyframes: {
