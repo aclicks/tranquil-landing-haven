@@ -10,9 +10,9 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-primary font-nicholas text-2xl">Dr. Matheus Casquer</h1>
           <div className="hidden md:flex space-x-8">
-            <a href="#about" className="text-primary hover:text-accent transition-colors">About</a>
-            <a href="#services" className="text-primary hover:text-accent transition-colors">Services</a>
-            <a href="#contact" className="text-primary hover:text-accent transition-colors">Contact</a>
+            <a href="#about" className="text-primary hover:text-accent transition-colors">Sobre</a>
+            <a href="#services" className="text-primary hover:text-accent transition-colors">Serviços</a>
+            <a href="#contact" className="text-primary hover:text-accent transition-colors">Contato</a>
           </div>
         </div>
       </nav>
@@ -22,16 +22,16 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-up">
             <h2 className="text-4xl md:text-6xl font-nicholas text-primary leading-tight">
-              Professional Psychiatric Care for Your Mental Well-being
+              Cuidados Psiquiátricos Profissionais para seu Bem-estar Mental
             </h2>
             <p className="text-accent text-lg md:text-xl mt-4">
-              Dedicated to providing compassionate and evidence-based mental health care
+              Dedicado a fornecer cuidados de saúde mental compassivos e baseados em evidências
             </p>
             <a
               href="#contact"
               className="inline-block bg-primary text-background px-8 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
             >
-              Schedule a Consultation
+              Agende uma Consulta
             </a>
           </div>
         </div>
@@ -42,13 +42,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
-              About Dr. Matheus Casquer
+              Sobre o Dr. Matheus Casquer
             </h3>
             <div className="prose prose-lg text-accent-dark opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <p>
-                With years of experience in psychiatric care, Dr. Casquer specializes in providing personalized treatment
-                approaches for various mental health conditions. His practice combines evidence-based therapeutic techniques
-                with a compassionate understanding of each patient's unique needs.
+                Com anos de experiência em cuidados psiquiátricos, o Dr. Casquer é especializado em fornecer abordagens
+                de tratamento personalizadas para várias condições de saúde mental. Sua prática combina técnicas
+                terapêuticas baseadas em evidências com uma compreensão compassiva das necessidades únicas de cada paciente.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Index = () => {
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
-            Services Offered
+            Serviços Oferecidos
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -81,33 +81,33 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
-              Get in Touch
+              Entre em Contato
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                <ContactInfo icon={<MapPin />} title="Location" content="123 Medical Center Ave, Suite 100" />
-                <ContactInfo icon={<Phone />} title="Phone" content="+1 (555) 123-4567" />
-                <ContactInfo icon={<Mail />} title="Email" content="contact@drcasquer.com" />
-                <ContactInfo icon={<Clock />} title="Hours" content="Mon-Fri: 9:00 AM - 5:00 PM" />
+                <ContactInfo icon={<MapPin />} title="Localização" content="Av. Centro Médico, 123, Sala 100" />
+                <ContactInfo icon={<Phone />} title="Telefone" content="+55 (11) 99999-9999" />
+                <ContactInfo icon={<Mail />} title="E-mail" content="contato@drcasquer.com" />
+                <ContactInfo icon={<Clock />} title="Horário" content="Seg-Sex: 9:00 - 17:00" />
               </div>
               <form className="space-y-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder="Seu Nome"
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
                 />
                 <input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Seu E-mail"
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
                 />
                 <textarea
-                  placeholder="Your Message"
+                  placeholder="Sua Mensagem"
                   rows={4}
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
                 ></textarea>
                 <button className="w-full bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300">
-                  Send Message
+                  Enviar Mensagem
                 </button>
               </form>
             </div>
@@ -118,7 +118,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-secondary text-background py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. All rights reserved.</p>
+          <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
@@ -127,28 +127,28 @@ const Index = () => {
 
 const services = [
   {
-    title: "Individual Therapy",
-    description: "Personalized therapeutic sessions tailored to your specific needs and goals.",
+    title: "Terapia Individual",
+    description: "Sessões terapêuticas personalizadas adaptadas às suas necessidades e objetivos específicos.",
   },
   {
-    title: "Medication Management",
-    description: "Expert guidance and monitoring of psychiatric medications for optimal results.",
+    title: "Gestão de Medicação",
+    description: "Orientação especializada e monitoramento de medicamentos psiquiátricos para resultados ideais.",
   },
   {
-    title: "Anxiety Treatment",
-    description: "Evidence-based approaches to manage and reduce anxiety symptoms.",
+    title: "Tratamento de Ansiedade",
+    description: "Abordagens baseadas em evidências para gerenciar e reduzir sintomas de ansiedade.",
   },
   {
-    title: "Depression Care",
-    description: "Comprehensive treatment plans for managing depression and improving quality of life.",
+    title: "Cuidados com Depressão",
+    description: "Planos de tratamento abrangentes para gerenciar a depressão e melhorar a qualidade de vida.",
   },
   {
-    title: "Stress Management",
-    description: "Techniques and strategies to better handle life's pressures and challenges.",
+    title: "Gestão do Estresse",
+    description: "Técnicas e estratégias para lidar melhor com as pressões e desafios da vida.",
   },
   {
-    title: "Consultation",
-    description: "Professional evaluation and treatment recommendations for various mental health concerns.",
+    title: "Consulta",
+    description: "Avaliação profissional e recomendações de tratamento para várias preocupações de saúde mental.",
   },
 ];
 
