@@ -1,8 +1,15 @@
-
 import React from "react";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 const Index = () => {
+  const phoneNumber = "5567991000575";
+  const address = "Av. Afonso Pena, 4496 - Sala 1305, Campo Grande - MS";
+  
+  const handleWhatsAppClick = (message: string = "") => {
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -27,12 +34,12 @@ const Index = () => {
             <p className="text-accent text-lg md:text-xl mt-4">
               Dedicado a fornecer cuidados de saúde mental compassivos e baseados em evidências
             </p>
-            <a
-              href="#contact"
+            <button
+              onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
               className="inline-block bg-primary text-background px-8 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
             >
               Agende uma Consulta
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -85,28 +92,56 @@ const Index = () => {
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                <ContactInfo icon={<MapPin />} title="Localização" content="Av. Centro Médico, 123, Sala 100" />
-                <ContactInfo icon={<Phone />} title="Telefone" content="+55 (11) 99999-9999" />
+                <ContactInfo 
+                  icon={<MapPin />} 
+                  title="Localização" 
+                  content={address}
+                />
+                <ContactInfo 
+                  icon={<Phone />} 
+                  title="Telefone" 
+                  content="(67) 99100-0575"
+                  onClick={() => handleWhatsAppClick()}
+                  className="cursor-pointer hover:text-accent transition-colors"
+                />
                 <ContactInfo icon={<Mail />} title="E-mail" content="contato@drcasquer.com" />
                 <ContactInfo icon={<Clock />} title="Horário" content="Seg-Sex: 9:00 - 17:00" />
               </div>
-              <form className="space-y-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+              <form 
+                className="space-y-4 opacity-0 animate-fade-up" 
+                style={{ animationDelay: "0.3s" }}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const message = `Nome: ${formData.get('name')}\nE-mail: ${formData.get('email')}\nMensagem: ${formData.get('message')}`;
+                  handleWhatsAppClick(message);
+                }}
+              >
                 <input
+                  name="name"
                   type="text"
                   placeholder="Seu Nome"
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                  required
                 />
                 <input
+                  name="email"
                   type="email"
                   placeholder="Seu E-mail"
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                  required
                 />
                 <textarea
+                  name="message"
                   placeholder="Sua Mensagem"
                   rows={4}
                   className="w-full px-4 py-2 rounded-lg border border-primary/20 focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                  required
                 ></textarea>
-                <button className="w-full bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300">
+                <button 
+                  type="submit"
+                  className="w-full bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
+                >
                   Enviar Mensagem
                 </button>
               </form>
@@ -152,8 +187,23 @@ const services = [
   },
 ];
 
-const ContactInfo = ({ icon, title, content }: { icon: React.ReactNode; title: string; content: string }) => (
-  <div className="flex items-start space-x-4">
+const ContactInfo = ({ 
+  icon, 
+  title, 
+  content,
+  onClick,
+  className = ""
+}: { 
+  icon: React.ReactNode; 
+  title: string; 
+  content: string;
+  onClick?: () => void;
+  className?: string;
+}) => (
+  <div 
+    className={`flex items-start space-x-4 ${className}`}
+    onClick={onClick}
+  >
     <div className="text-primary">{icon}</div>
     <div>
       <h4 className="font-nicholas text-primary">{title}</h4>
