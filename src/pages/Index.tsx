@@ -14,13 +14,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b border-primary/10">
+      <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-primary font-nicholas text-2xl">Dr. Matheus Casquer</h1>
+          <h1 className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</h1>
           <div className="hidden md:flex space-x-8">
-            <a href="#about" className="text-primary hover:text-accent transition-colors">Sobre</a>
-            <a href="#services" className="text-primary hover:text-accent transition-colors">Serviços</a>
-            <a href="#contact" className="text-primary hover:text-accent transition-colors">Contato</a>
+            <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
+            <a href="#services" className="text-background hover:text-background/80 transition-colors">Serviços</a>
+            <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
       </nav>
