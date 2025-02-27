@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -115,24 +114,39 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
-              Sobre mim
-            </h3>
-            <div className="prose prose-lg text-accent-dark opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p>
-                Desde a faculdade de medicina, a psiquiatria me chamou a atenção por ser a especialidade médica 
-                que conjuga o lado técnico, investigativo e clínico com a necessidade imperativa de olhar para 
-                o ser humano à sua frente e ouvir sua história. Sempre me foi muito claro que não se cuida 
-                apenas de doenças ou transtornos, mas sim de pessoas.
-              </p>
-              <div className="mt-4">
-                <Link 
-                  to="/sobre" 
-                  className="text-primary hover:text-accent font-semibold transition-colors"
-                >
-                  Conheça mais sobre minha trajetória profissional
-                </Link>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
+                  Sobre mim
+                </h3>
+                <div className="prose prose-lg text-accent-dark opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+                  <p>
+                    Desde a faculdade de medicina, a psiquiatria me chamou a atenção por ser a especialidade médica 
+                    que conjuga o lado técnico, investigativo e clínico com a necessidade imperativa de olhar para 
+                    o ser humano à sua frente e ouvir sua história. Sempre me foi muito claro que não se cuida 
+                    apenas de doenças ou transtornos, mas sim de pessoas.
+                  </p>
+                  <div className="mt-4">
+                    <Link 
+                      to="/sobre" 
+                      className="text-primary hover:text-accent font-semibold transition-colors inline-flex items-center"
+                    >
+                      Conheça mais sobre minha trajetória profissional
+                      <ChevronRight className="ml-1 w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/10 rounded-lg transform rotate-3 scale-95"></div>
+                  <img 
+                    src="/lovable-uploads/5b15a1b5-d4f3-49dc-8449-3a2bb4ff7f5f.png"
+                    alt="Dr. Matheus Casquer"
+                    className="w-full h-auto rounded-lg shadow-xl relative z-10 transform transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -182,19 +196,6 @@ const Index = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Photo Section */}
-      <section className="py-20 bg-secondary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto opacity-0 animate-fade-up">
-            <img 
-              src="/dr-matheus-casquer.jpg" 
-              alt="Dr. Matheus Casquer" 
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
           </div>
         </div>
       </section>
