@@ -40,51 +40,55 @@ const Sobre = () => {
               Formação e Trajetória
             </h2>
             <div className="prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Sou natural de São José do Rio Preto, interior do estado de São Paulo. Aos 18 anos, 
                 fui aprovado no vestibular de Medicina da Universidade Federal de Mato Grosso do Sul (UFMS), 
                 em Campo Grande – MS, ingressando no curso em 2013.
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Logo nos primeiros anos da graduação, a Psiquiatria despertou meu interesse e me pareceu um 
                 caminho natural para minha carreira. Participei de diversas atividades, coordenei a Liga 
                 Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
                 para essa área.
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Após concluir a graduação, iniciei minha atuação na rede pública de saúde mental (SUS). 
                 Trabalhei inicialmente como clínico assistente no CAPS III Adulto, no CAPS Infantojuvenil 
                 e no CAPS Álcool e Drogas. No mesmo ano, fui aprovado para a Residência Médica em Psiquiatria 
                 da Secretaria Municipal de Saúde (SESAU) de Campo Grande – MS.
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Minha residência médica foi um período marcante, não apenas pelas boas recordações, mas também 
                 pela formação sólida que recebi. Além de um amplo treinamento tradicional em ambulatório e enfermaria, 
                 abrangendo transtornos do humor e de ansiedade, psicoses, dependências químicas, demências e 
                 transtornos de personalidade, tive a oportunidade de aprofundar meus conhecimentos em áreas específicas, 
                 como transtornos alimentares (com destaque para compulsão alimentar), psiquiatria infantil e transtornos 
-                do neurodesenvolvimento (TDAH, autismo, entre outros). Havia também uma atenção especial à abordagem 
-                social e ao tratamento humanizado dos pacientes, princípios que se tornaram indissociáveis da minha 
-                prática médica e me inspiraram a ingressar no Mestrado Profissional em Saúde da Família da 
-                Universidade Federal de Mato Grosso do Sul (UFMS).
+                do neurodesenvolvimento (TDAH, autismo, entre outros).
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
+                Havia também uma atenção especial à abordagem social e ao tratamento humanizado dos pacientes, 
+                princípios que se tornaram indissociáveis da minha prática médica e me inspiraram a ingressar 
+                no Mestrado Profissional em Saúde da Família da Universidade Federal de Mato Grosso do Sul (UFMS).
+              </p>
+              <p className="text-justify leading-relaxed mb-4">
                 Após a titulação como médico psiquiatra, atuei em diversas frentes. Fui diretor técnico do CAPS III 
                 Vila Almeida, em Campo Grande – MS, onde trabalhei na assistência a pacientes graves e na gestão da 
                 equipe médica. Também atuei em psiquiatria infantil no CAPS III Infantil e nos Centros Especiais 
                 de Reabilitação em Transtornos do Neurodesenvolvimento, incluindo o Cotolengo Sul-Mato-Grossense 
                 e a Associação Juliano Varela.
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Além disso, minha vocação para o ensino, sempre presente ao longo da minha trajetória, se consolidou 
                 quando passei a atuar como preceptor da Residência de Psiquiatria da SESAU-Campo Grande, em 2023, 
-                auxiliando na formação de médicos residentes e atuando como assistente na área de Psiquiatria Forense. 
+                auxiliando na formação de médicos residentes e atuando como assistente na área de Psiquiatria Forense.
+              </p>
+              <p className="text-justify leading-relaxed mb-4">
                 Desde 2023, também sou preceptor da Residência Médica em Psiquiatria da Universidade Federal de 
                 Mato Grosso do Sul (UFMS), inicialmente como voluntário e, a partir de 2025, como preceptor titular 
                 e membro do corpo clínico de psiquiatras assistentes do Hospital Universitário Maria Aparecida 
                 Pedrossian (HUMAP-UFMS/EBSERH).
               </p>
-              <p>
+              <p className="text-justify leading-relaxed mb-4">
                 Atualmente, além dessas atividades, atuo em consultório particular, oferecendo atendimento baseado 
                 na boa prática médica, aliando rigor técnico e humanismo, sempre à disposição dos pacientes e de 
                 seus familiares que buscam auxílio.
