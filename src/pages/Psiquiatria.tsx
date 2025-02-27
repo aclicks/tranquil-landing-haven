@@ -1,8 +1,15 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Psiquiatria = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollToContact: true } });
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Navigation */}
@@ -13,7 +20,7 @@ const Psiquiatria = () => {
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
             <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
-            <a href="/#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
+            <a href="#" onClick={handleContactClick} className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
       </nav>

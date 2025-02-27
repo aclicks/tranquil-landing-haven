@@ -1,7 +1,7 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // Array de artigos de psiquiatria
 const allArticles = [
@@ -47,12 +47,30 @@ const Index = () => {
   const phoneNumber = "5567991000575";
   const address = "Av. Afonso Pena, 4496 - Sala 1305\nCampo Grande - MS";
   const [articles, setArticles] = useState<typeof allArticles>([]);
+  const location = useLocation();
+  const contactRef = useRef<HTMLElement>(null);
   
   // Função para embaralhar artigos e selecionar 3 aleatórios
   useEffect(() => {
     const shuffledArticles = [...allArticles].sort(() => 0.5 - Math.random()).slice(0, 3);
     setArticles(shuffledArticles);
   }, []);
+  
+  // Efeito para rolar para a seção de contato quando vindo de outras páginas
+  useEffect(() => {
+    if (location.state && location.state.scrollToContact && contactRef.current) {
+      setTimeout(() => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
+    
+    // Verificar hash na URL para scrolls diretos
+    if (location.hash === '#contact' && contactRef.current) {
+      setTimeout(() => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    }
+  }, [location]);
   
   const handleWhatsAppClick = (message: string = "") => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -182,7 +200,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" ref={contactRef} className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">

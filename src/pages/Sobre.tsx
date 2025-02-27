@@ -1,14 +1,20 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 
 const Sobre = () => {
   const phoneNumber = "5567991000575";
+  const navigate = useNavigate();
   
   const handleWhatsAppClick = (message: string = "") => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+  };
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/', { state: { scrollToContact: true } });
   };
 
   return (
@@ -21,7 +27,7 @@ const Sobre = () => {
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
             <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
-            <a href="/#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
+            <a href="#" onClick={handleContactClick} className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
       </nav>
