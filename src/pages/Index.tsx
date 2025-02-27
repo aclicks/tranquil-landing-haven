@@ -1,6 +1,7 @@
 
 import React from "react";
-import { MapPin, Mail, Phone, Clock, MessageSquare } from "lucide-react";
+import { MapPin, Mail, Phone, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const phoneNumber = "5567991000575";
@@ -19,7 +20,8 @@ const Index = () => {
           <h1 className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</h1>
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
-            <a href="#services" className="text-background hover:text-background/80 transition-colors">Serviços</a>
+            <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação</Link>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
@@ -30,7 +32,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-up">
             <h2 className="text-4xl md:text-6xl font-nicholas text-primary leading-tight">
-              Cuidados Psiquiátricos Profissionais para seu Bem-estar Mental
+              Psiquiatria dedicada à atenção ao ser humano, valorizando saber, escuta e a singularidade.
             </h2>
             <p className="text-accent text-lg md:text-xl mt-4">
               Dedicado a fornecer cuidados de saúde mental compassivos e baseados em evidências
@@ -50,36 +52,37 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
-              Sobre o Dr. Matheus Casquer
+              Sobre mim
             </h3>
             <div className="prose prose-lg text-accent-dark opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <p>
-                Com anos de experiência em cuidados psiquiátricos, o Dr. Casquer é especializado em fornecer abordagens
-                de tratamento personalizadas para várias condições de saúde mental. Sua prática combina técnicas
-                terapêuticas baseadas em evidências com uma compreensão compassiva das necessidades únicas de cada paciente.
+                Desde a faculdade de medicina, a psiquiatria me chamou a atenção por ser a especialidade médica 
+                que conjuga o lado técnico, investigativo e clínico com a necessidade imperativa de olhar para 
+                o ser humano à sua frente e ouvir sua história. Sempre me foi muito claro que não se cuida 
+                apenas de doenças ou transtornos, mas sim de pessoas.
               </p>
+              <div className="mt-4">
+                <Link 
+                  to="/sobre" 
+                  className="text-primary hover:text-accent font-semibold transition-colors"
+                >
+                  Conheça mais sobre minha trajetória profissional
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20">
+      {/* Photo Section (replacing Services) */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
-            Serviços Oferecidos
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow opacity-0 animate-fade-up"
-                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
-              >
-                <h4 className="text-xl font-nicholas text-primary mb-3">{service.title}</h4>
-                <p className="text-accent-dark">{service.description}</p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto opacity-0 animate-fade-up">
+            <img 
+              src="/dr-matheus-casquer.jpg" 
+              alt="Dr. Matheus Casquer" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </section>
@@ -107,7 +110,6 @@ const Index = () => {
                   className="cursor-pointer hover:text-accent transition-colors"
                 />
                 <ContactInfo icon={<Mail />} title="E-mail" content="matheusscasquer@gmail.com" />
-                <ContactInfo icon={<Clock />} title="Horário" content="Seg-Sex: 9:00 - 17:00" />
               </div>
               <div className="flex flex-col gap-4">
                 <div className="h-[300px] w-full opacity-0 animate-fade-up rounded-lg overflow-hidden shadow-lg" style={{ animationDelay: "0.3s" }}>
@@ -144,33 +146,6 @@ const Index = () => {
     </div>
   );
 };
-
-const services = [
-  {
-    title: "Terapia Individual",
-    description: "Sessões terapêuticas personalizadas adaptadas às suas necessidades e objetivos específicos.",
-  },
-  {
-    title: "Gestão de Medicação",
-    description: "Orientação especializada e monitoramento de medicamentos psiquiátricos para resultados ideais.",
-  },
-  {
-    title: "Tratamento de Ansiedade",
-    description: "Abordagens baseadas em evidências para gerenciar e reduzir sintomas de ansiedade.",
-  },
-  {
-    title: "Cuidados com Depressão",
-    description: "Planos de tratamento abrangentes para gerenciar a depressão e melhorar a qualidade de vida.",
-  },
-  {
-    title: "Gestão do Estresse",
-    description: "Técnicas e estratégias para lidar melhor com as pressões e desafios da vida.",
-  },
-  {
-    title: "Consulta",
-    description: "Avaliação profissional e recomendações de tratamento para várias preocupações de saúde mental.",
-  },
-];
 
 const ContactInfo = ({ 
   icon, 
