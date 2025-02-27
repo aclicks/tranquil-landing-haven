@@ -1,11 +1,58 @@
 
-import React from "react";
-import { MapPin, Mail, Phone, MessageSquare } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
+// Array de artigos de psiquiatria
+const allArticles = [
+  {
+    id: 1,
+    title: "Depressão: Muito Além da Tristeza",
+    excerpt: "A depressão é uma condição que afeta milhões de pessoas ao redor do mundo. Entenda os sintomas, causas e tratamentos disponíveis.",
+    imageUrl: "/placeholder.svg",
+  },
+  {
+    id: 2,
+    title: "Ansiedade na Era Digital",
+    excerpt: "Como o uso excessivo de tecnologia e redes sociais pode contribuir para transtornos de ansiedade e estratégias para lidar com isso.",
+    imageUrl: "/placeholder.svg",
+  },
+  {
+    id: 3,
+    title: "TDAH em Adultos",
+    excerpt: "O Transtorno de Déficit de Atenção e Hiperatividade não afeta apenas crianças. Saiba como identificar e tratar o TDAH na vida adulta.",
+    imageUrl: "/placeholder.svg",
+  },
+  {
+    id: 4,
+    title: "Burnout: Quando o Trabalho Adoece",
+    excerpt: "O esgotamento profissional é cada vez mais comum no mundo corporativo. Conheça os sinais, fatores de risco e formas de prevenção.",
+    imageUrl: "/placeholder.svg",
+  },
+  {
+    id: 5,
+    title: "Sono e Saúde Mental",
+    excerpt: "A qualidade do sono tem impacto direto na saúde mental. Descubra como melhorar seus hábitos de sono e beneficiar sua mente.",
+    imageUrl: "/placeholder.svg",
+  },
+  {
+    id: 6,
+    title: "Transtornos Alimentares",
+    excerpt: "Uma análise sobre anorexia, bulimia e compulsão alimentar, seus impactos psicológicos e abordagens terapêuticas.",
+    imageUrl: "/placeholder.svg",
+  }
+];
 
 const Index = () => {
   const phoneNumber = "5567991000575";
   const address = "Av. Afonso Pena, 4496 - Sala 1305\nCampo Grande - MS";
+  const [articles, setArticles] = useState<typeof allArticles>([]);
+  
+  // Função para embaralhar artigos e selecionar 3 aleatórios
+  useEffect(() => {
+    const shuffledArticles = [...allArticles].sort(() => 0.5 - Math.random()).slice(0, 3);
+    setArticles(shuffledArticles);
+  }, []);
   
   const handleWhatsAppClick = (message: string = "") => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -21,7 +68,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação</Link>
-            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
+            <a href="#psychiatry" className="text-background hover:text-background/80 transition-colors">Psiquiatria</a>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
@@ -74,8 +121,55 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Photo Section (replacing Services) */}
-      <section className="py-20">
+      {/* Psychiatry Section (Articles) */}
+      <section id="psychiatry" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex justify-between items-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-nicholas text-primary opacity-0 animate-fade-up">
+                Psiquiatria
+              </h3>
+              <Link 
+                to="/psiquiatria" 
+                className="flex items-center text-primary hover:text-accent transition-colors font-semibold opacity-0 animate-fade-up"
+              >
+                Ver todos os artigos
+                <ChevronRight className="ml-1 w-5 h-5" />
+              </Link>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {articles.map((article, index) => (
+                <div 
+                  key={article.id}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow opacity-0 animate-fade-up"
+                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+                >
+                  <img 
+                    src={article.imageUrl} 
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h4 className="font-nicholas text-primary text-xl mb-3">{article.title}</h4>
+                    <p className="text-accent-dark mb-4 line-clamp-3">{article.excerpt}</p>
+                    <Link 
+                      to={`/psiquiatria`} 
+                      className="text-primary hover:text-accent font-semibold inline-flex items-center"
+                    >
+                      Leia mais
+                      <ChevronRight className="ml-1 w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Section */}
+      <section className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto opacity-0 animate-fade-up">
             <img 
@@ -88,7 +182,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-secondary/5">
+      <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-nicholas text-primary mb-12 text-center opacity-0 animate-fade-up">
