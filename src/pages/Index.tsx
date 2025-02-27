@@ -68,7 +68,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
-            <a href="#psychiatry" className="text-background hover:text-background/80 transition-colors">Psiquiatria</a>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>

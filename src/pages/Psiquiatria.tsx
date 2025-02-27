@@ -11,7 +11,7 @@ const Psiquiatria = () => {
           <Link to="/" className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</Link>
           <div className="hidden md:flex space-x-8">
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
-            <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação</Link>
+            <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
             <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
             <Link to="/#contact" className="text-background hover:text-background/80 transition-colors">Contato</Link>
           </div>
