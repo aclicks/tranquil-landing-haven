@@ -139,7 +139,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="order-1 md:order-2 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <div className="relative">
+                <div className="relative max-w-[80%] mx-auto">
                   <div className="absolute inset-0 bg-primary/10 rounded-lg transform rotate-3 scale-95"></div>
                   <img 
                     src="/lovable-uploads/5b15a1b5-d4f3-49dc-8449-3a2bb4ff7f5f.png"
