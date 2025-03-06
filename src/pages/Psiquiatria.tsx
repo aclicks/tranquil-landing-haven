@@ -40,7 +40,7 @@ const articles = [
       "Ansiedade à flor da pele: o corpo fala",
       "Do ponto de vista biológico, os transtornos de ansiedade envolvem um complexo sistema de alarme cerebral que está constantemente ativado.",
       "A amígdala, estrutura responsável por processar ameaças, torna-se hiper-reativa, enviando sinais de perigo mesmo quando não há motivo real. O córtex pré-frontal, que deveria regular essa resposta, tem dificuldade em exercer seu papel inibidor. Isso faz com que o corpo permaneça em um estado de alerta exagerado, com a liberação constante de cortisol e adrenalina, substâncias que deveriam ser reservadas para situações de risco real.",
-      "O resultado?.",
+      "O resultado?",
       "Coração acelerado, sudorese, tontura, aperto no peito, tremores e uma sensação de catástrofe iminente. No Transtorno de Ansiedade Generalizada (TAG), esses sintomas se manifestam de forma crônica, com preocupações excessivas e incontroláveis sobre o futuro, a saúde, o trabalho e até mesmo pequenas decisões do dia a dia.",
       "Na Síndrome do Pânico, os episódios são súbitos e intensos: o medo toma conta, o ar parece faltar, e a pessoa tem a sensação de que vai perder o controle, desmaiar ou até morrer. Já nas fobias, o terror se concentra em objetos, situações ou lugares específicos – mas a reação é igualmente avassaladora.",
       "O medo se inscreve no sujeito",
@@ -209,6 +209,15 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
+            {/* Add image after the heading */}
+            <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              <img 
+                src="/placeholder.svg" 
+                alt="Conteúdos" 
+                className="w-full h-48 md:h-64 object-cover rounded-xl shadow-md" 
+              />
+            </div>
+            
             {/* Full articles */}
             <div className="space-y-20">
               {articles.map((article, index) => (
@@ -216,7 +225,7 @@ const Psiquiatria = () => {
                   key={article.id} 
                   id={`article-${article.id}`} 
                   className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
-                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
                   <div className="flex items-center gap-4 mb-8">
                     <img 
