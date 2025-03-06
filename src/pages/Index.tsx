@@ -1,9 +1,7 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-// Array de artigos de conteúdos
 const allArticles = [
   {
     id: 1,
@@ -44,13 +42,11 @@ const Index = () => {
   const location = useLocation();
   const contactRef = useRef<HTMLElement>(null);
   
-  // Função para embaralhar artigos e selecionar 3 aleatórios
   useEffect(() => {
     const shuffledArticles = [...allArticles].sort(() => 0.5 - Math.random()).slice(0, 3);
     setArticles(shuffledArticles);
   }, []);
   
-  // Efeito para rolar para a seção de contato quando vindo de outras páginas
   useEffect(() => {
     if (location.state && location.state.scrollToContact && contactRef.current) {
       setTimeout(() => {
@@ -58,7 +54,6 @@ const Index = () => {
       }, 500);
     }
     
-    // Verificar hash na URL para scrolls diretos
     if (location.hash === '#contact' && contactRef.current) {
       setTimeout(() => {
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -73,7 +68,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
@@ -93,7 +87,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-up">
@@ -110,7 +103,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -152,7 +144,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Conteúdos Section */}
       <section id="conteudos" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -201,7 +192,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" ref={contactRef} className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -251,7 +241,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-secondary text-background py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>

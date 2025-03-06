@@ -15,7 +15,7 @@ const articles = [
       "Um impacto real no cérebro e no corpo",
       "Do ponto de vista biológico, a depressão provoca mudanças profundas. Desequilíbrios químicos e alterações nos circuitos cerebrais prejudicam a regulação do humor, a motivação e até mesmo a capacidade de sentir prazer.",
       "Aos poucos, a vida torna-se cinza, pesada e, não raro, o próprio ato de viver adquire tons de insuportabilidade.",
-      "Além disso, o estresse constante ativa mecanismos de defesa do organismo, liberando substâncias que podem piorar os sintomas e enfraquecer tanto a mente quanto o corpo. Com o tempo, áreas do cérebro responsáveis pela memória e pelo controle emocional podem sofrer danos, tornando a recuperação ainda mais desafiadora.",
+      "Além disso, o estresse constante ativa mecanismos de defesa do organismo, liberando substâncias que podem piorar os sintomas e enfraquecer tanto a mente quanto o body. Com o tempo, áreas do cérebro responsáveis pela memória e pelo controle emocional podem sofrer danos, tornando a recuperação ainda mais desafiadora.",
       "As marcas invisíveis",
       "Mas a depressão não se resume à biologia.",
       "Muitas vezes, ela nasce de dores profundas da história de vida, de experiências que deixaram marcas invisíveis, mas que ainda ecoam no presente.",
@@ -221,9 +221,9 @@ const Psiquiatria = () => {
                     <img 
                       src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                       alt="Logo" 
-                      className="h-8 w-auto"
+                      className="h-10 w-auto"
                     />
-                    <h2 className="font-nicholas text-primary text-4xl md:text-5xl mb-0">{article.title}</h2>
+                    <h2 className="font-nicholas text-primary text-3xl md:text-4xl mb-0">{article.title}</h2>
                   </div>
                   {article.content.map((paragraph, i) => (
                     <p key={i} className={i === 0 || i === 1 ? "font-semibold text-lg" : ""}>
