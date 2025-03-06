@@ -26,7 +26,7 @@ const Sobre = () => {
           <div className="hidden md:flex space-x-8">
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
-            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</Link>
             <a href="#" onClick={handleContactClick} className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
@@ -46,8 +46,8 @@ const Sobre = () => {
                 em Campo Grande – MS, ingressando no curso em 2013.
               </p>
               <p className="text-justify leading-relaxed mb-4">
-                Logo nos primeiros anos da graduação, a Psiquiatria despertou meu interesse e me pareceu um 
-                caminho natural para minha carreira. Participei de diversas atividades, coordenei a Liga 
+                Logo nos primeiros anos da graduação, a Psiquiatria despertou meu interesse e pareceu um 
+                caminho natural a ser seguido em minha carreira. Participei de diversas atividades, coordenei a Liga 
                 Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
                 para essa área.
               </p>
@@ -78,8 +78,8 @@ const Sobre = () => {
                 e a Associação Juliano Varela.
               </p>
               <p className="text-justify leading-relaxed mb-4">
-                Além disso, minha vocação para o ensino, sempre presente ao longo da minha trajetória, se consolidou 
-                quando passei a atuar como preceptor da Residência de Psiquiatria da SESAU-Campo Grande, em 2023, 
+                Além disso, um chamado vocacional para o ensino, sempre presente ao longo da minha trajetória, 
+                se consolidou quando passei a atuar como preceptor da Residência de Psiquiatria da SESAU-Campo Grande, em 2023, 
                 auxiliando na formação de médicos residentes e atuando como assistente na área de Psiquiatria Forense.
               </p>
               <p className="text-justify leading-relaxed mb-4">

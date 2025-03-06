@@ -86,7 +86,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
-            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Psiquiatria</Link>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</Link>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
@@ -220,7 +220,7 @@ const Index = () => {
                   onClick={() => handleWhatsAppClick()}
                   className="cursor-pointer hover:text-accent transition-colors"
                 />
-                <ContactInfo icon={<Mail />} title="E-mail" content="matheusscasquer@gmail.com" />
+                <ContactInfo icon={<Mail />} title="E-mail" content="drmatheuscasquer@gmail.com" />
               </div>
               <div className="flex flex-col gap-4">
                 <div className="h-[300px] w-full opacity-0 animate-fade-up rounded-lg overflow-hidden shadow-lg" style={{ animationDelay: "0.3s" }}>
