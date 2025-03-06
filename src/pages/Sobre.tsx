@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
@@ -23,7 +24,7 @@ const Sobre = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/ae66257e-2ff6-42b9-a0ac-46fd3461ce22.png" 
+              src="/lovable-uploads/13de0730-5b70-4115-bf81-555346bead7e.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
