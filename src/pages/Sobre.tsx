@@ -24,7 +24,7 @@ const Sobre = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/13de0730-5b70-4115-bf81-555346bead7e.png" 
+              src="/lovable-uploads/e7d1e1d2-c400-44d7-9685-5d37c2629bdd.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
@@ -43,12 +43,27 @@ const Sobre = () => {
       <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
-              Formação e Trajetória
-            </h2>
+            <div className="flex items-center mb-8 opacity-0 animate-fade-up">
+              <img 
+                src="/lovable-uploads/e7d1e1d2-c400-44d7-9685-5d37c2629bdd.png" 
+                alt="Dark Logo" 
+                className="h-10 w-auto mr-3"
+              />
+              <h2 className="text-3xl md:text-4xl font-nicholas text-primary">
+                Formação e Trajetória
+              </h2>
+            </div>
             
-            <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
-              <div className="md:w-2/3 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex flex-col md:flex-row items-start gap-8 mb-10">
+              <div className="md:w-1/3 opacity-0 animate-fade-up order-2 md:order-1" style={{ animationDelay: "0.3s" }}>
+                <img 
+                  src="/lovable-uploads/b5ee5e2b-e09f-438b-8ceb-5077d9cca25a.png" 
+                  alt="Dr. Matheus Casquer sorrindo" 
+                  className="w-full h-auto rounded-lg shadow-lg sticky top-32"
+                />
+              </div>
+              
+              <div className="md:w-2/3 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up order-1 md:order-2" style={{ animationDelay: "0.2s" }}>
                 <p className="text-justify leading-relaxed mb-4">
                   Sou natural de São José do Rio Preto, interior do estado de São Paulo. Aos 18 anos, 
                   fui aprovado no vestibular de Medicina da Universidade Federal de Mato Grosso do Sul (UFMS), 
@@ -60,68 +75,57 @@ const Sobre = () => {
                   Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
                   para essa área.
                 </p>
-              </div>
-              
-              <div className="md:w-1/3 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <img 
-                  src="/lovable-uploads/b5ee5e2b-e09f-438b-8ceb-5077d9cca25a.png" 
-                  alt="Dr. Matheus Casquer sorrindo" 
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-              <p className="text-justify leading-relaxed mb-4">
-                Após concluir a graduação, iniciei minha atuação na rede pública de saúde mental (SUS). 
-                Trabalhei inicialmente como clínico assistente no CAPS III Adulto, no CAPS Infantojuvenil 
-                e no CAPS Álcool e Drogas. No mesmo ano, fui aprovado para a Residência Médica em Psiquiatria 
-                da Secretaria Municipal de Saúde (SESAU) de Campo Grande – MS.
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Minha residência médica foi um período marcante, não apenas pelas boas recordações, mas também 
-                pela formação sólida que recebi. Além de um amplo treinamento tradicional em ambulatório e enfermaria, 
-                abrangendo transtornos do humor e de ansiedade, psicoses, dependências químicas, demências e 
-                transtornos de personalidade, tive a oportunidade de aprofundar meus conhecimentos em áreas específicas, 
-                como transtornos alimentares (com destaque para compulsão alimentar), psiquiatria infantil e transtornos 
-                do neurodesenvolvimento (TDAH, autismo, entre outros).
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Havia também uma atenção especial à abordagem social e ao tratamento humanizado dos pacientes, 
-                princípios que se tornaram indissociáveis da minha prática médica e me inspiraram a ingressar 
-                no Mestrado Profissional em Saúde da Família da Universidade Federal de Mato Grosso do Sul (UFMS).
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Após a titulação como médico psiquiatra, atuei em diversas frentes. Fui diretor técnico do CAPS III 
-                Vila Almeida, em Campo Grande – MS, onde trabalhei na assistência a pacientes graves e na gestão da 
-                equipe médica. Também atuei em psiquiatria infantil no CAPS III Infantil e nos Centros Especiais 
-                de Reabilitação em Transtornos do Neurodesenvolvimento, incluindo o Cotolengo Sul-Mato-Grossense 
-                e a Associação Juliano Varela.
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Além disso, um chamado vocacional para o ensino, sempre presente ao longo da minha trajetória, 
-                se consolidou quando passei a atuar como preceptor da Residência de Psiquiatria da SESAU-Campo Grande, em 2023, 
-                auxiliando na formação de médicos residentes e atuando como assistente na área de Psiquiatria Forense.
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Desde 2023, também sou preceptor da Residência Médica em Psiquiatria da Universidade Federal de 
-                Mato Grosso do Sul (UFMS), inicialmente como voluntário e, a partir de 2025, como preceptor titular 
-                e membro do corpo clínico de psiquiatras assistentes do Hospital Universitário Maria Aparecida 
-                Pedrossian (HUMAP-UFMS/EBSERH).
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Atualmente, além dessas atividades, atuo em consultório particular, oferecendo atendimento baseado 
-                na boa prática médica, aliando rigor técnico e humanismo, sempre à disposição dos pacientes e de 
-                seus familiares que buscam auxílio.
-              </p>
-              <div className="mt-8">
-                <button
-                  onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
-                  className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
-                >
-                  <MessageSquare className="w-5 h-5" />
-                  Agende sua consulta
-                </button>
+                <p className="text-justify leading-relaxed mb-4">
+                  Após concluir a graduação, iniciei minha atuação na rede pública de saúde mental (SUS). 
+                  Trabalhei inicialmente como clínico assistente no CAPS III Adulto, no CAPS Infantojuvenil 
+                  e no CAPS Álcool e Drogas. No mesmo ano, fui aprovado para a Residência Médica em Psiquiatria 
+                  da Secretaria Municipal de Saúde (SESAU) de Campo Grande – MS.
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Minha residência médica foi um período marcante, não apenas pelas boas recordações, mas também 
+                  pela formação sólida que recebi. Além de um amplo treinamento tradicional em ambulatório e enfermaria, 
+                  abrangendo transtornos do humor e de ansiedade, psicoses, dependências químicas, demências e 
+                  transtornos de personalidade, tive a oportunidade de aprofundar meus conhecimentos em áreas específicas, 
+                  como transtornos alimentares (com destaque para compulsão alimentar), psiquiatria infantil e transtornos 
+                  do neurodesenvolvimento (TDAH, autismo, entre outros).
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Havia também uma atenção especial à abordagem social e ao tratamento humanizado dos pacientes, 
+                  princípios que se tornaram indissociáveis da minha prática médica e me inspiraram a ingressar 
+                  no Mestrado Profissional em Saúde da Família da Universidade Federal de Mato Grosso do Sul (UFMS).
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Após a titulação como médico psiquiatra, atuei em diversas frentes. Fui diretor técnico do CAPS III 
+                  Vila Almeida, em Campo Grande – MS, onde trabalhei na assistência a pacientes graves e na gestão da 
+                  equipe médica. Também atuei em psiquiatria infantil no CAPS III Infantil e nos Centros Especiais 
+                  de Reabilitação em Transtornos do Neurodesenvolvimento, incluindo o Cotolengo Sul-Mato-Grossense 
+                  e a Associação Juliano Varela.
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Além disso, um chamado vocacional para o ensino, sempre presente ao longo da minha trajetória, 
+                  se consolidou quando passei a atuar como preceptor da Residência de Psiquiatria da SESAU-Campo Grande, em 2023, 
+                  auxiliando na formação de médicos residentes e atuando como assistente na área de Psiquiatria Forense.
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Desde 2023, também sou preceptor da Residência Médica em Psiquiatria da Universidade Federal de 
+                  Mato Grosso do Sul (UFMS), inicialmente como voluntário e, a partir de 2025, como preceptor titular 
+                  e membro do corpo clínico de psiquiatras assistentes do Hospital Universitário Maria Aparecida 
+                  Pedrossian (HUMAP-UFMS/EBSERH).
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Atualmente, além dessas atividades, atuo em consultório particular, oferecendo atendimento baseado 
+                  na boa prática médica, aliando rigor técnico e humanismo, sempre à disposição dos pacientes e de 
+                  seus familiares que buscam auxílio.
+                </p>
+                <div className="mt-8">
+                  <button
+                    onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
+                    className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                    Agende sua consulta
+                  </button>
+                </div>
               </div>
             </div>
           </div>
