@@ -8,7 +8,7 @@ const articles = [
   {
     id: 1,
     title: "Depressão: Muito além de Fraqueza ou Escolha",
-    image: "/lovable-uploads/5214b07d-2dde-4da8-80c0-0ca51479223a.png",
+    image: "/placeholder.svg", // Changed from the specific image to placeholder
     content: [
       "Por que alguém que tem uma vida aparentemente boa sente um vazio tão grande que nada parece ter sentido?",
       "Será falta de fé? Falta de força de vontade? Apenas tristeza passageira?",
@@ -158,7 +158,14 @@ const Psiquiatria = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</Link>
+          <div className="flex items-center">
+            <Link to="/" className="text-background font-nicholas text-2xl mr-2">Dr. Matheus Casquer</Link>
+            <img 
+              src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+              alt="Logo" 
+              className="h-8 w-auto"
+            />
+          </div>
           <div className="hidden md:flex space-x-8">
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
@@ -172,9 +179,17 @@ const Psiquiatria = () => {
       <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
-              Conteúdos
-            </h2>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-3xl md:text-4xl font-nicholas text-primary opacity-0 animate-fade-up">
+                Conteúdos
+              </h2>
+              <img 
+                src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+                alt="Logo" 
+                className="h-10 w-auto opacity-0 animate-fade-up"
+                style={{ animationDelay: "0.1s" }}
+              />
+            </div>
             
             <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
               <div className="md:w-1/2 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -199,7 +214,7 @@ const Psiquiatria = () => {
                     <div className="md:flex">
                       <div className="md:shrink-0 md:w-1/3">
                         <img 
-                          src={index === 0 ? "/lovable-uploads/5214b07d-2dde-4da8-80c0-0ca51479223a.png" : article.image} 
+                          src={article.image} 
                           alt={article.title}
                           className="h-48 md:h-full w-full object-cover"
                         />
@@ -235,7 +250,14 @@ const Psiquiatria = () => {
                   id={`article-${article.id}`} 
                   className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
                 >
-                  <h2 className="font-nicholas text-primary mb-6">{article.title}</h2>
+                  <div className="flex items-center gap-4 mb-6">
+                    <h2 className="font-nicholas text-primary mb-0">{article.title}</h2>
+                    <img 
+                      src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+                      alt="Logo" 
+                      className="h-8 w-auto"
+                    />
+                  </div>
                   {article.content.map((paragraph, i) => (
                     <p key={i} className={i === 0 || i === 1 ? "font-semibold text-lg" : ""}>
                       {paragraph}
@@ -259,6 +281,14 @@ const Psiquiatria = () => {
       {/* Footer */}
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="text-xl font-nicholas">Dr. Matheus Casquer</span>
+            <img 
+              src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+              alt="Logo" 
+              className="h-6 w-auto"
+            />
+          </div>
           <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>
         </div>
       </footer>
