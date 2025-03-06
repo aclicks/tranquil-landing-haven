@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -168,35 +169,38 @@ const Psiquiatria = () => {
         </div>
       </nav>
 
-      <section className="pt-32 pb-24 px-4">
+      <section className="pt-32 pb-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-nicholas text-primary text-center leading-tight mb-8 opacity-0 animate-fade-up">
             Conteúdos
           </h2>
-          <p className="text-accent-dark text-center text-lg opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-accent-dark text-center text-lg mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Artigos e informações sobre saúde mental e bem-estar.
           </p>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article) => (
-              <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden opacity-0 animate-fade-up" id={`article-${article.id}`}>
-                <div className="p-6">
-                  <h3 className="font-nicholas text-primary text-2xl mb-4">{article.title}</h3>
-                  <div>{article.content}</div>
-                  <div className="mt-4">
-                    <Link to="/" className="text-primary hover:text-accent font-semibold inline-flex items-center">
-                      Voltar para a página inicial
-                      <ChevronRight className="ml-1 w-4 h-4" />
-                    </Link>
-                  </div>
+      <section className="py-8">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {articles.map((article, index) => (
+            <div 
+              key={article.id} 
+              className="bg-white rounded-lg shadow-md overflow-hidden mb-10 opacity-0 animate-fade-up"
+              id={`article-${article.id}`}
+              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+            >
+              <div className="p-8">
+                <h3 className="font-nicholas text-primary text-2xl md:text-3xl mb-6 border-b pb-3 border-primary/20">{article.title}</h3>
+                <div className="prose prose-lg max-w-none">{article.content}</div>
+                <div className="mt-6 pt-4 border-t border-primary/20">
+                  <Link to="/" className="text-primary hover:text-accent font-semibold inline-flex items-center">
+                    Voltar para a página inicial
+                    <ChevronRight className="ml-1 w-4 h-4" />
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
