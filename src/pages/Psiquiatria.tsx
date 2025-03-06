@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -8,7 +7,7 @@ const articles = [
   {
     id: 1,
     title: "Depressão: Muito além de Fraqueza ou Escolha",
-    image: "/placeholder.svg", // Changed from the specific image to placeholder
+    image: "/placeholder.svg",
     content: [
       "Por que alguém que tem uma vida aparentemente boa sente um vazio tão grande que nada parece ter sentido?",
       "Será falta de fé? Falta de força de vontade? Apenas tristeza passageira?",
@@ -144,7 +143,6 @@ const Psiquiatria = () => {
   const location = useLocation();
   const phoneNumber = "5567991000575";
   
-  // Get the article ID from the URL hash if present
   const articleId = location.hash ? parseInt(location.hash.replace('#article-', '')) : null;
   
   const handleContactClick = (e: React.MouseEvent) => {
@@ -157,7 +155,6 @@ const Psiquiatria = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  // When component mounts, scroll to the article if an ID is provided
   React.useEffect(() => {
     if (articleId) {
       const element = document.getElementById(`article-${articleId}`);
@@ -173,7 +170,6 @@ const Psiquiatria = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
@@ -193,7 +189,6 @@ const Psiquiatria = () => {
         </div>
       </nav>
 
-      {/* Content */}
       <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
@@ -209,9 +204,8 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            {/* Add image and introduction with two columns */}
             <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div className="bg-white p-6 rounded-xl shadow-md flex flex-col md:flex-row gap-6 items-center">
+              <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="md:w-1/3">
                   <img 
                     src="/lovable-uploads/249e7c78-4c41-4868-9dfb-aa93326237e8.png" 
@@ -230,7 +224,6 @@ const Psiquiatria = () => {
               </div>
             </div>
             
-            {/* Full articles */}
             <div className="space-y-20">
               {articles.map((article, index) => (
                 <article 
@@ -249,11 +242,9 @@ const Psiquiatria = () => {
                   </div>
                   <div className="space-y-6 text-justify leading-relaxed">
                     {article.content.map((paragraph, i) => {
-                      // Check if the paragraph ends with a period and isn't "O resultado?"
                       const endsWithPeriod = paragraph.trim().endsWith('.');
                       const isOResultado = paragraph.trim() === "O resultado?";
                       
-                      // Render as h2 if it doesn't end with a period (and isn't "O resultado?"), otherwise as p
                       return endsWithPeriod || isOResultado ? (
                         <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
                           {paragraph}
@@ -280,7 +271,6 @@ const Psiquiatria = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
