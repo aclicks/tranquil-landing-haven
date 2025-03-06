@@ -24,7 +24,7 @@ const Sobre = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/e7d1e1d2-c400-44d7-9685-5d37c2629bdd.png" 
+              src="/lovable-uploads/681564cc-330e-4186-adb8-806a5af1785c.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
@@ -45,7 +45,7 @@ const Sobre = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center mb-8 opacity-0 animate-fade-up">
               <img 
-                src="/lovable-uploads/e7d1e1d2-c400-44d7-9685-5d37c2629bdd.png" 
+                src="/lovable-uploads/5024cc5c-f5dd-4424-a4ee-ffd657fff024.png" 
                 alt="Dark Logo" 
                 className="h-10 w-auto mr-3"
               />
