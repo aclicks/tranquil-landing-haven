@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -81,7 +82,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
-            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</a>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</Link>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
