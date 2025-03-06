@@ -227,11 +227,21 @@ const Psiquiatria = () => {
                     <h2 className="font-nicholas text-primary text-3xl md:text-4xl mb-0">{article.title}</h2>
                   </div>
                   <div className="space-y-6 text-justify leading-relaxed">
-                    {article.content.map((paragraph, i) => (
-                      <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
-                        {paragraph}
-                      </p>
-                    ))}
+                    {article.content.map((paragraph, i) => {
+                      // Check if the paragraph ends with a period
+                      const endsWithPeriod = paragraph.trim().endsWith('.');
+                      
+                      // Render as h2 if it doesn't end with a period, otherwise as p
+                      return endsWithPeriod ? (
+                        <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
+                          {paragraph}
+                        </p>
+                      ) : (
+                        <h2 key={i} className="text-2xl font-semibold text-primary mt-8 mb-4 tracking-normal">
+                          {paragraph}
+                        </h2>
+                      );
+                    })}
                   </div>
                   <div className="mt-10">
                     <button
