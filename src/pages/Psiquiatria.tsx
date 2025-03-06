@@ -220,10 +220,17 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            <div className="mb-10 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-lg text-center">
+            <div className="mb-10 flex flex-col md:flex-row items-center gap-8 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              <p className="text-lg md:w-1/2 text-center md:text-left">
                 Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
               </p>
+              <div className="md:w-1/2 flex justify-center">
+                <img 
+                  src="/lovable-uploads/a20c0175-1dc5-4333-b2f7-9ab29c3f7939.png" 
+                  alt="Dr. Matheus Casquer" 
+                  className="rounded-lg shadow-md w-full max-w-sm object-cover"
+                />
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
