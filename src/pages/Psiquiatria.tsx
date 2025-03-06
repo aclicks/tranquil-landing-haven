@@ -1,12 +1,22 @@
+
 import React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { MessageSquare } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { ChevronRight, MessageSquare } from "lucide-react";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle,
+  DialogTrigger
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 // Array of article content
 const articles = [
   {
     id: 1,
     title: "Depressão: Muito além de Fraqueza ou Escolha",
+    subtitle: "Por que alguém que tem uma vida aparentemente boa sente um vazio tão grande que nada parece ter sentido?",
     image: "/placeholder.svg",
     content: [
       "Por que alguém que tem uma vida aparentemente boa sente um vazio tão grande que nada parece ter sentido?",
@@ -30,6 +40,7 @@ const articles = [
   {
     id: 2,
     title: "Ansiedade: Quando a razão conflita com o descontrole",
+    subtitle: "Algumas pessoas sentem uma angústia constante, mesmo sem motivo aparente.",
     image: "/placeholder.svg",
     content: [
       "Algumas pessoas sentem uma angústia constante, mesmo sem motivo aparente.",
@@ -55,6 +66,7 @@ const articles = [
   {
     id: 3,
     title: "TDAH: Desatenção, Impulsividade ou Algo Além?",
+    subtitle: "A luta para manter o foco, mesmo quando se quer prestar atenção.",
     image: "/placeholder.svg",
     content: [
       "A luta para manter o foco, mesmo quando se quer prestar atenção.",
@@ -81,6 +93,7 @@ const articles = [
   {
     id: 4,
     title: "Autismo: Singularidade, Não Deficiência",
+    subtitle: "Algumas crianças evitam o contato visual. Outras parecem alheias ao que acontece ao redor.",
     image: "/placeholder.svg",
     content: [
       "Algumas crianças evitam o contato visual. Outras parecem alheias ao que acontece ao redor.",
@@ -112,6 +125,7 @@ const articles = [
   {
     id: 5,
     title: "Transtorno de Personalidade Borderline: Entre a Intensidade e a Ruptura",
+    subtitle: "A dor de quem vive com Transtorno de Personalidade Borderline (TPB) não se explica com palavras simples.",
     image: "/placeholder.svg",
     content: [
       "A dor de quem vive com Transtorno de Personalidade Borderline (TPB) não se explica com palavras simples.",
@@ -140,10 +154,7 @@ const articles = [
 
 const Psiquiatria = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const phoneNumber = "5567991000575";
-  
-  const articleId = location.hash ? parseInt(location.hash.replace('#article-', '')) : null;
   
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -155,18 +166,22 @@ const Psiquiatria = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  React.useEffect(() => {
-    if (articleId) {
-      const element = document.getElementById(`article-${articleId}`);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [articleId]);
+  const renderArticleContent = (paragraphs: string[]) => {
+    return paragraphs.map((paragraph, i) => {
+      const endsWithPeriod = paragraph.trim().endsWith('.');
+      const isOResultado = paragraph.trim() === "O resultado?";
+      
+      return endsWithPeriod || isOResultado ? (
+        <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
+          {paragraph}
+        </p>
+      ) : (
+        <h2 key={i} className="text-xl font-semibold text-primary mt-8 mb-4 tracking-normal">
+          {paragraph}
+        </h2>
+      );
+    });
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -205,68 +220,54 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div className="flex flex-col md:flex-row gap-6 items-center">
-                <div className="md:w-2/3">
-                  <p className="text-lg mb-4 text-right">
-                    Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
-                  </p>
-                  <p className="text-lg text-right">
-                    Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
-                  </p>
-                </div>
-                <div className="md:w-1/3">
-                  <img 
-                    src="/lovable-uploads/249e7c78-4c41-4868-9dfb-aa93326237e8.png" 
-                    alt="Dr. Matheus Casquer" 
-                    className="w-full h-auto object-cover rounded-lg shadow-sm" 
-                  />
-                </div>
-              </div>
+            <div className="mb-10 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              <p className="text-lg text-center">
+                Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
+              </p>
             </div>
             
-            <div className="space-y-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {articles.map((article, index) => (
-                <article 
+                <div 
                   key={article.id} 
-                  id={`article-${article.id}`} 
-                  className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 opacity-0 animate-fade-up"
                   style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                 >
-                  <div className="flex items-center gap-4 mb-8">
-                    <img 
-                      src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
-                      alt="Logo" 
-                      className="h-10 w-auto"
-                    />
-                    <h2 className="font-nicholas text-primary text-3xl md:text-4xl mb-0">{article.title}</h2>
-                  </div>
-                  <div className="space-y-6 text-justify leading-relaxed">
-                    {article.content.map((paragraph, i) => {
-                      const endsWithPeriod = paragraph.trim().endsWith('.');
-                      const isOResultado = paragraph.trim() === "O resultado?";
-                      
-                      return endsWithPeriod || isOResultado ? (
-                        <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
-                          {paragraph}
-                        </p>
-                      ) : (
-                        <h2 key={i} className="text-xl font-semibold text-primary mt-8 mb-4 tracking-normal">
-                          {paragraph}
-                        </h2>
-                      );
-                    })}
-                  </div>
-                  <div className="mt-10">
-                    <button
-                      onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
-                      className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
-                    >
-                      <MessageSquare className="w-5 h-5" />
-                      Se precisar de suporte, agende sua por consulta aqui
-                    </button>
-                  </div>
-                </article>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="cursor-pointer">
+                        <div className="p-6">
+                          <h3 className="font-nicholas text-primary text-xl mb-3 line-clamp-2">{article.title}</h3>
+                          <p className="text-gray-600 mb-4 line-clamp-3">{article.subtitle}</p>
+                          <Button className="flex items-center gap-2">
+                            Saiba mais <ChevronRight className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-4xl flex flex-col gap-0 p-0 max-h-[80vh]">
+                      <DialogHeader className="contents">
+                        <DialogTitle className="border-b border-border px-6 py-4 text-xl font-nicholas text-primary">
+                          {article.title}
+                        </DialogTitle>
+                        <div className="overflow-y-auto px-6 py-4">
+                          <div className="space-y-6 text-justify leading-relaxed">
+                            {renderArticleContent(article.content)}
+                          </div>
+                          <div className="mt-8">
+                            <Button 
+                              onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
+                              className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
+                            >
+                              <MessageSquare className="w-5 h-5" />
+                              Se precisar de suporte, agende sua consulta aqui
+                            </Button>
+                          </div>
+                        </div>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
+                </div>
               ))}
             </div>
           </div>
