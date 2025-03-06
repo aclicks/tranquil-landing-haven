@@ -239,7 +239,7 @@ const Psiquiatria = () => {
                         <div className="p-6">
                           <h3 className="font-nicholas text-primary text-xl mb-3 line-clamp-2">{article.title}</h3>
                           <p className="text-gray-600 mb-4 line-clamp-3">{article.subtitle}</p>
-                          <Button className="flex items-center gap-2">
+                          <Button className="flex items-center gap-2 text-white">
                             Saiba mais <ChevronRight className="h-4 w-4" />
                           </Button>
                         </div>
@@ -247,7 +247,7 @@ const Psiquiatria = () => {
                     </DialogTrigger>
                     <DialogContent className="sm:max-w-4xl flex flex-col gap-0 p-0 max-h-[80vh]">
                       <DialogHeader className="contents">
-                        <DialogTitle className="border-b border-border px-6 py-4 text-xl font-nicholas text-primary">
+                        <DialogTitle className="border-b border-border px-6 py-4 text-xl md:text-2xl font-nicholas text-primary">
                           {article.title}
                         </DialogTitle>
                         <div className="overflow-y-auto px-6 py-4">
