@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -82,7 +81,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-8">
             <a href="#about" className="text-background hover:text-background/80 transition-colors">Sobre</a>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
-            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</Link>
+            <Link to="/psiquiatria" className="text-background hover:text-background/80 transition-colors">Conteúdos</a>
             <a href="#contact" className="text-background hover:text-background/80 transition-colors">Contato</a>
           </div>
         </div>
@@ -169,11 +168,6 @@ const Index = () => {
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                   onClick={() => window.location.href = `/psiquiatria#article-${article.id}`}
                 >
-                  <img 
-                    src={article.imageUrl} 
-                    alt={article.title}
-                    className="w-full h-48 object-cover"
-                  />
                   <div className="p-6">
                     <h4 className="font-nicholas text-primary text-xl mb-3">{article.title}</h4>
                     <p className="text-accent-dark mb-4 line-clamp-3">{article.excerpt}</p>
@@ -219,7 +213,7 @@ const Index = () => {
               <div className="flex flex-col gap-4">
                 <div className="h-[300px] w-full opacity-0 animate-fade-up rounded-lg overflow-hidden shadow-lg" style={{ animationDelay: "0.3s" }}>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1824.2052094336664!2d-54.62201643123016!3d-20.462234481864585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e89c9a273ad5%3A0x9ae4b9b09d02d2e1!2sAv.%20Afonso%20Pena%2C%204496%20-%20Jardim%20dos%20Estados%2C%20Campo%20Grande%20-%20MS%2C%2079020-001!5e0!3m2!1spt-BR!2sbr!4v1710547532075!5m2!1spt-BR!2sbr"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1824.2052094336664!2d-54.62201643123016!3d-20.462234481864585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e89c9a273ad5%3A0x9ae4b9b09d02d2e1!2sAv.%20Afonso%20Pena%2C%204496%20-%20Jardim%20dos%20Estados%2C%20Campo%20Grande%20-%20MS%2C%2079020-001!5e0!3m2!1spt-BR!2sbr!4v1710547532075!5m2!1spt-BR!2sbr!4v1710547532075!5m2!1spt-BR!2sbr"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
