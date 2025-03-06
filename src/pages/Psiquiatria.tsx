@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 // Array of article content
 const articles = [
@@ -171,6 +171,7 @@ const Psiquiatria = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
@@ -262,6 +263,7 @@ const Psiquiatria = () => {
                       onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
                       className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
                     >
+                      <MessageSquare className="w-5 h-5" />
                       Agende sua consulta
                     </button>
                   </div>
@@ -272,6 +274,7 @@ const Psiquiatria = () => {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -290,4 +293,3 @@ const Psiquiatria = () => {
 };
 
 export default Psiquiatria;
-
