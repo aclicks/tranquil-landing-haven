@@ -3,27 +3,27 @@ import { Link, useNavigate } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
 
 const Sobre = () => {
-  const phoneNumber = "5567991000575";
   const navigate = useNavigate();
-  
-  const handleWhatsAppClick = (message: string = "") => {
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  const phoneNumber = "5567991000575";
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate('/', { state: { scrollToContact: true } });
   };
 
+  const handleWhatsAppClick = (message: string = "") => {
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/28d381d0-e396-4a5a-bca7-7b2d2f3e141c.png" 
+              src="/lovable-uploads/ae66257e-2ff6-42b9-a0ac-46fd3461ce22.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
@@ -39,7 +39,7 @@ const Sobre = () => {
       </nav>
 
       {/* Content */}
-      <section className="pt-32 pb-20 px-4">
+      <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">

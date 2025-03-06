@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 
 // Array of article content
@@ -141,8 +140,12 @@ const articles = [
 
 const Psiquiatria = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const phoneNumber = "5567991000575";
-
+  
+  // Get the article ID from the URL hash if present
+  const articleId = location.hash ? parseInt(location.hash.replace('#article-', '')) : null;
+  
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate('/', { state: { scrollToContact: true } });
@@ -153,6 +156,20 @@ const Psiquiatria = () => {
     window.open(whatsappUrl, '_blank');
   };
 
+  // When component mounts, scroll to the article if an ID is provided
+  React.useEffect(() => {
+    if (articleId) {
+      const element = document.getElementById(`article-${articleId}`);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [articleId]);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Navigation */}
@@ -160,7 +177,7 @@ const Psiquiatria = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/28d381d0-e396-4a5a-bca7-7b2d2f3e141c.png" 
+              src="/lovable-uploads/ae66257e-2ff6-42b9-a0ac-46fd3461ce22.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
@@ -179,7 +196,7 @@ const Psiquiatria = () => {
       <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-16">
               <img 
                 src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                 alt="Logo" 
@@ -191,64 +208,14 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
-              <div className="md:w-1/2 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                <img 
-                  src="/lovable-uploads/944b71a7-afc5-42d7-8f8c-81904b98c8f9.png" 
-                  alt="Dr. Matheus Casquer" 
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-              </div>
-              
-              <div className="md:w-1/2 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-                <p className="text-lg">
-                  Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-16 space-y-16">
-              {articles.map((article, index) => (
-                <div key={article.id} className="opacity-0 animate-fade-up" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                    <div className="md:flex">
-                      <div className="md:shrink-0 md:w-1/3">
-                        <img 
-                          src={article.image} 
-                          alt={article.title}
-                          className="h-48 md:h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className="p-8 md:w-2/3">
-                        <h3 className="font-nicholas text-primary text-2xl mb-4">{article.title}</h3>
-                        <div className="prose text-accent-dark">
-                          <p>{article.content[0]}</p>
-                          <p>{article.content[1]}</p>
-                          <p className="line-clamp-3">{article.content[2]}</p>
-                        </div>
-                        <div className="mt-6">
-                          <button 
-                            className="text-primary font-semibold flex items-center hover:text-accent transition-colors"
-                            onClick={() => document.getElementById(`article-${article.id}`)?.scrollIntoView({ behavior: 'smooth' })}
-                          >
-                            Leia mais
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
             {/* Full articles */}
-            <div className="mt-20 space-y-20">
-              {articles.map((article) => (
+            <div className="space-y-20">
+              {articles.map((article, index) => (
                 <article 
                   key={article.id} 
                   id={`article-${article.id}`} 
                   className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
+                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <img 
@@ -256,7 +223,7 @@ const Psiquiatria = () => {
                       alt="Logo" 
                       className="h-8 w-auto"
                     />
-                    <h2 className="font-nicholas text-primary mb-0">{article.title}</h2>
+                    <h2 className="font-nicholas text-primary text-4xl md:text-5xl mb-0">{article.title}</h2>
                   </div>
                   {article.content.map((paragraph, i) => (
                     <p key={i} className={i === 0 || i === 1 ? "font-semibold text-lg" : ""}>

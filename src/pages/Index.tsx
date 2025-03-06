@@ -78,7 +78,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/28d381d0-e396-4a5a-bca7-7b2d2f3e141c.png" 
+              src="/lovable-uploads/ae66257e-2ff6-42b9-a0ac-46fd3461ce22.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
@@ -173,8 +173,9 @@ const Index = () => {
               {articles.slice(0, 3).map((article, index) => (
                 <div 
                   key={article.id}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow opacity-0 animate-fade-up"
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow opacity-0 animate-fade-up cursor-pointer"
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+                  onClick={() => window.location.href = `/psiquiatria#article-${article.id}`}
                 >
                   <img 
                     src={article.imageUrl} 
@@ -185,8 +186,9 @@ const Index = () => {
                     <h4 className="font-nicholas text-primary text-xl mb-3">{article.title}</h4>
                     <p className="text-accent-dark mb-4 line-clamp-3">{article.excerpt}</p>
                     <Link 
-                      to={`/psiquiatria`} 
+                      to={`/psiquiatria#article-${article.id}`} 
                       className="text-primary hover:text-accent font-semibold inline-flex items-center"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Leia mais
                       <ChevronRight className="ml-1 w-4 h-4" />
