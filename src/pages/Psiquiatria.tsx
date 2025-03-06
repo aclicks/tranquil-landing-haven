@@ -25,7 +25,7 @@ const articles = [
       "Um impacto real no cérebro e no corpo",
       "Do ponto de vista biológico, a depressão provoca mudanças profundas. Desequilíbrios químicos e alterações nos circuitos cerebrais prejudicam a regulação do humor, a motivação e até mesmo a capacidade de sentir prazer.",
       "Aos poucos, a vida torna-se cinza, pesada e, não raro, o próprio ato de viver adquire tons de insuportabilidade.",
-      "Além disso, o estresse constante ativa mecanismos de defesa do organismo, liberando substâncias que podem piorar os sintomas e enfraquecer tanto a mente quanto o body. Com o tempo, áreas do cérebro responsáveis pela memória e pelo controle emocional podem sofrer danos, tornando a recuperação ainda mais desafiadora.",
+      "Além disso, o estresse constante ativa mecanismos de defesa do organismo, liberando substâncias que podem piorar os sintomas e enfraquecer tanto a mente quanto o corpo. Com o tempo, áreas do cérebro responsáveis pela memória e pelo controle emocional podem sofrer danos, tornando a recuperação ainda mais desafiadora.",
       "As marcas invisíveis",
       "Mas a depressão não se resume à biologia.",
       "Muitas vezes, ela nasce de dores profundas da história de vida, de experiências que deixaram marcas invisíveis, mas que ainda ecoam no presente.",
@@ -146,7 +146,7 @@ const articles = [
       "Lidar com o TPB exige um olhar clínico cuidadoso e sem julgamentos.",
       "O diagnóstico não deve ser feito com pressa nem baseado apenas no comportamento visível. O sofrimento borderline é profundo, e sua manifestação pode variar – alguns expressam sua dor com explosões emocionais, outros a dirigem para si mesmos, em gestos autodestrutivos silenciosos.",
       "O tratamento envolve tanto a regulação emocional quanto o resgate da própria identidade.",
-      "A psicoterapia – especialmente abordagens como a terapia dialética comportamental (TDC) e a psicanálise – ajuda a criar ferramentas para modular emoções, compreender os padrões de vínculo e desenvolver um senso mais estável de si. O acompanhamento psiquiátrico pode auxiliar na estabilização da impulsividade e das oscilações emocionais mais intensas, permitindo que a pessoa borderline respire sem sentir que está à beira de um colapso constante.",
+      "A psicoterapia ajuda a criar ferramentas para modular emoções, compreender os padrões de vínculo e desenvolver um senso mais estável de si. O acompanhamento psiquiátrico pode auxiliar na estabilização da impulsividade e das oscilações emocionais mais intensas, permitindo que a pessoa borderline respire sem sentir que está à beira de um colapso constante.",
       "Com suporte adequado, é possível transformar a intensidade do borderline em potência. Não se trata de apagar a sensibilidade, mas de aprender a habitá-la sem ser consumido por ela. Encontrar equilíbrio não significa perder a intensidade, mas fazer dela uma força que constrói, e não que destrói."
     ]
   }
