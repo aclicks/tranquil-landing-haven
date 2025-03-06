@@ -97,6 +97,13 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-up">
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/lovable-uploads/ae66257e-2ff6-42b9-a0ac-46fd3461ce22.png" 
+                alt="Logo"
+                className="h-16 w-auto"
+              />
+            </div>
             <h2 className="text-4xl md:text-6xl font-nicholas text-primary leading-tight">
               Psiquiatria dedicada à atenção ao ser humano, valorizando saber, escuta e a singularidade.
             </h2>
