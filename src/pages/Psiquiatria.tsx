@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
@@ -206,12 +207,23 @@ const Psiquiatria = () => {
             </div>
             
             <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-lg mb-4 text-right">
-                Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
-              </p>
-              <p className="text-lg text-right">
-                Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
-              </p>
+              <div className="flex flex-col md:flex-row gap-6 items-center">
+                <div className="md:w-2/3">
+                  <p className="text-lg mb-4 text-right">
+                    Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
+                  </p>
+                  <p className="text-lg text-right">
+                    Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
+                  </p>
+                </div>
+                <div className="md:w-1/3">
+                  <img 
+                    src="/lovable-uploads/249e7c78-4c41-4868-9dfb-aa93326237e8.png" 
+                    alt="Dr. Matheus Casquer" 
+                    className="w-full h-auto object-cover rounded-lg shadow-sm" 
+                  />
+                </div>
+              </div>
             </div>
             
             <div className="space-y-20">
@@ -265,6 +277,14 @@ const Psiquiatria = () => {
       {/* Footer */}
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <img 
+              src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+              alt="Logo" 
+              className="h-6 w-auto"
+            />
+            <span className="text-xl font-nicholas">Dr. Matheus Casquer</span>
+          </div>
           <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>
         </div>
       </footer>
