@@ -159,12 +159,12 @@ const Psiquiatria = () => {
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/" className="text-background font-nicholas text-2xl mr-2">Dr. Matheus Casquer</Link>
             <img 
-              src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+              src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
               alt="Logo" 
-              className="h-8 w-auto"
+              className="h-8 w-auto mr-2"
             />
+            <Link to="/" className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</Link>
           </div>
           <div className="hidden md:flex space-x-8">
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
@@ -180,15 +180,15 @@ const Psiquiatria = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
-              <h2 className="text-3xl md:text-4xl font-nicholas text-primary opacity-0 animate-fade-up">
-                Conteúdos
-              </h2>
               <img 
-                src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+                src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                 alt="Logo" 
                 className="h-10 w-auto opacity-0 animate-fade-up"
-                style={{ animationDelay: "0.1s" }}
               />
+              <h2 className="text-3xl md:text-4xl font-nicholas text-primary opacity-0 animate-fade-up"
+                  style={{ animationDelay: "0.1s" }}>
+                Conteúdos
+              </h2>
             </div>
             
             <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
@@ -251,12 +251,12 @@ const Psiquiatria = () => {
                   className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <h2 className="font-nicholas text-primary mb-0">{article.title}</h2>
                     <img 
-                      src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
+                      src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                       alt="Logo" 
                       className="h-8 w-auto"
                     />
+                    <h2 className="font-nicholas text-primary mb-0">{article.title}</h2>
                   </div>
                   {article.content.map((paragraph, i) => (
                     <p key={i} className={i === 0 || i === 1 ? "font-semibold text-lg" : ""}>
@@ -282,12 +282,12 @@ const Psiquiatria = () => {
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-xl font-nicholas">Dr. Matheus Casquer</span>
             <img 
               src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
               alt="Logo" 
               className="h-6 w-auto"
             />
+            <span className="text-xl font-nicholas">Dr. Matheus Casquer</span>
           </div>
           <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>
         </div>

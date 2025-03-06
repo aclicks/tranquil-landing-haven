@@ -22,7 +22,14 @@ const Sobre = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-primary z-50 border-b border-background/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</Link>
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
+              alt="Logo" 
+              className="h-8 w-auto mr-2"
+            />
+            <Link to="/" className="text-background font-nicholas text-2xl">Dr. Matheus Casquer</Link>
+          </div>
           <div className="hidden md:flex space-x-8">
             <Link to="/#about" className="text-background hover:text-background/80 transition-colors">Sobre</Link>
             <Link to="/sobre" className="text-background hover:text-background/80 transition-colors">Formação e Trajetória</Link>
