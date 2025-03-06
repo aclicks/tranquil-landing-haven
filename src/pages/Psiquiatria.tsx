@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
@@ -277,14 +276,6 @@ const Psiquiatria = () => {
       {/* Footer */}
       <footer className="bg-secondary text-background py-8 mt-auto">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <img 
-              src="/lovable-uploads/e12a3532-6fb5-4b13-8bee-2315db0d9442.png" 
-              alt="Logo" 
-              className="h-6 w-auto"
-            />
-            <span className="text-xl font-nicholas">Dr. Matheus Casquer</span>
-          </div>
           <p className="opacity-80">&copy; {new Date().getFullYear()} Dr. Matheus Casquer. Todos os direitos reservados.</p>
         </div>
       </footer>
