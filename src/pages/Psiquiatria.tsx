@@ -209,13 +209,21 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            {/* Add image after the heading */}
+            {/* Add image and introduction */}
             <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
               <img 
-                src="/placeholder.svg" 
-                alt="Conteúdos" 
-                className="w-full h-48 md:h-64 object-cover rounded-xl shadow-md" 
+                src="/lovable-uploads/249e7c78-4c41-4868-9dfb-aa93326237e8.png" 
+                alt="Dr. Matheus Casquer" 
+                className="w-full h-auto mb-8 object-cover rounded-xl shadow-md" 
               />
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <p className="text-lg mb-4">
+                  Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
+                </p>
+                <p className="text-lg">
+                  Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
+                </p>
+              </div>
             </div>
             
             {/* Full articles */}
