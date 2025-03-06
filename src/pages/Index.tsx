@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -41,26 +42,26 @@ const Index = () => {
   const [articles, setArticles] = useState<typeof allArticles>([]);
   const location = useLocation();
   const contactRef = useRef<HTMLElement>(null);
-
+  
   useEffect(() => {
     const shuffledArticles = [...allArticles].sort(() => 0.5 - Math.random()).slice(0, 3);
     setArticles(shuffledArticles);
   }, []);
-
+  
   useEffect(() => {
     if (location.state && location.state.scrollToContact && contactRef.current) {
       setTimeout(() => {
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, 500);
     }
-
+    
     if (location.hash === '#contact' && contactRef.current) {
       setTimeout(() => {
         contactRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, 500);
     }
   }, [location]);
-
+  
   const handleWhatsAppClick = (message: string = "") => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -168,6 +169,11 @@ const Index = () => {
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                   onClick={() => window.location.href = `/psiquiatria#article-${article.id}`}
                 >
+                  <img 
+                    src={article.imageUrl} 
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
+                  />
                   <div className="p-6">
                     <h4 className="font-nicholas text-primary text-xl mb-3">{article.title}</h4>
                     <p className="text-accent-dark mb-4 line-clamp-3">{article.excerpt}</p>
