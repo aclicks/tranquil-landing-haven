@@ -40,7 +40,7 @@ const articles = [
       "Ansiedade à flor da pele: o corpo fala",
       "Do ponto de vista biológico, os transtornos de ansiedade envolvem um complexo sistema de alarme cerebral que está constantemente ativado.",
       "A amígdala, estrutura responsável por processar ameaças, torna-se hiper-reativa, enviando sinais de perigo mesmo quando não há motivo real. O córtex pré-frontal, que deveria regular essa resposta, tem dificuldade em exercer seu papel inibidor. Isso faz com que o corpo permaneça em um estado de alerta exagerado, com a liberação constante de cortisol e adrenalina, substâncias que deveriam ser reservadas para situações de risco real.",
-      "O resultado?",
+      "O resultado?.",
       "Coração acelerado, sudorese, tontura, aperto no peito, tremores e uma sensação de catástrofe iminente. No Transtorno de Ansiedade Generalizada (TAG), esses sintomas se manifestam de forma crônica, com preocupações excessivas e incontroláveis sobre o futuro, a saúde, o trabalho e até mesmo pequenas decisões do dia a dia.",
       "Na Síndrome do Pânico, os episódios são súbitos e intensos: o medo toma conta, o ar parece faltar, e a pessoa tem a sensação de que vai perder o controle, desmaiar ou até morrer. Já nas fobias, o terror se concentra em objetos, situações ou lugares específicos – mas a reação é igualmente avassaladora.",
       "O medo se inscreve no sujeito",
@@ -228,16 +228,17 @@ const Psiquiatria = () => {
                   </div>
                   <div className="space-y-6 text-justify leading-relaxed">
                     {article.content.map((paragraph, i) => {
-                      // Check if the paragraph ends with a period
+                      // Check if the paragraph ends with a period and isn't "O resultado?"
                       const endsWithPeriod = paragraph.trim().endsWith('.');
+                      const isOResultado = paragraph.trim() === "O resultado?";
                       
-                      // Render as h2 if it doesn't end with a period, otherwise as p
-                      return endsWithPeriod ? (
+                      // Render as h2 if it doesn't end with a period (and isn't "O resultado?"), otherwise as p
+                      return endsWithPeriod || isOResultado ? (
                         <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
                           {paragraph}
                         </p>
                       ) : (
-                        <h2 key={i} className="text-2xl font-semibold text-primary mt-8 mb-4 tracking-normal">
+                        <h2 key={i} className="text-xl font-semibold text-primary mt-8 mb-4 tracking-normal">
                           {paragraph}
                         </h2>
                       );
