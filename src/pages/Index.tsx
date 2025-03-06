@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -77,7 +78,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
+              src="/lovable-uploads/28d381d0-e396-4a5a-bca7-7b2d2f3e141c.png" 
               alt="Logo" 
               className="h-8 w-auto mr-2"
             />
