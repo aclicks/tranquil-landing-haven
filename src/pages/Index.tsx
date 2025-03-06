@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { MapPin, Mail, Phone, MessageSquare, ChevronRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-// Array de artigos de psiquiatria
+// Array de artigos de conteúdos
 const allArticles = [
   {
     id: 1,
@@ -151,19 +150,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Psychiatry Section (Articles) */}
-      <section id="psychiatry" className="py-20">
+      {/* Conteúdos Section (Previously Psychiatry) */}
+      <section id="conteudos" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-center mb-12">
               <h3 className="text-3xl md:text-4xl font-nicholas text-primary opacity-0 animate-fade-up">
-                Psiquiatria
+                Conteúdos
               </h3>
               <Link 
                 to="/psiquiatria" 
                 className="flex items-center text-primary hover:text-accent transition-colors font-semibold opacity-0 animate-fade-up"
               >
-                Ver todos os artigos
+                Ver todos os conteúdos
                 <ChevronRight className="ml-1 w-5 h-5" />
               </Link>
             </div>

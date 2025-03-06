@@ -41,15 +41,7 @@ const Sobre = () => {
             </h2>
             
             <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
-              <div className="md:w-1/3 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-                <img 
-                  src="/lovable-uploads/b5ee5e2b-e09f-438b-8ceb-5077d9cca25a.png" 
-                  alt="Dr. Matheus Casquer sorrindo" 
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-              </div>
-              
-              <div className="md:w-2/3 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+              <div className="md:w-2/3 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
                 <p className="text-justify leading-relaxed mb-4">
                   Sou natural de São José do Rio Preto, interior do estado de São Paulo. Aos 18 anos, 
                   fui aprovado no vestibular de Medicina da Universidade Federal de Mato Grosso do Sul (UFMS), 
@@ -61,6 +53,14 @@ const Sobre = () => {
                   Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
                   para essa área.
                 </p>
+              </div>
+              
+              <div className="md:w-1/3 opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <img 
+                  src="/lovable-uploads/b5ee5e2b-e09f-438b-8ceb-5077d9cca25a.png" 
+                  alt="Dr. Matheus Casquer sorrindo" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
               </div>
             </div>
             
