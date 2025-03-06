@@ -193,7 +193,7 @@ const Psiquiatria = () => {
       <section className="pt-32 pb-20 px-4 flex-grow">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-16">
+            <div className="flex items-center gap-3 mb-12">
               <img 
                 src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                 alt="Logo" 
@@ -205,23 +205,24 @@ const Psiquiatria = () => {
               </h2>
             </div>
             
-            <div className="mb-12 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div className="grid md:grid-cols-3 gap-8 items-start">
-                <div className="md:col-span-2 order-2 md:order-1">
-                  <p className="text-lg mb-4 text-justify">
-                    Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
-                  </p>
-                  <p className="text-lg text-justify">
-                    Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
-                  </p>
-                </div>
-                <div className="order-1 md:order-2">
-                  <img 
-                    src="/lovable-uploads/249e7c78-4c41-4868-9dfb-aa93326237e8.png" 
-                    alt="Dr. Matheus Casquer" 
-                    className="w-full h-auto object-cover rounded-lg shadow-sm" 
-                    style={{ transform: "scale(1.4)" }}
-                  />
+            <div className="mb-16 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+              <div className="bg-white/70 rounded-2xl shadow-sm overflow-hidden">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                    <p className="text-lg mb-4 text-justify">
+                      Este espaço foi criado para trazer informações confiáveis, esclarecer conceitos e desmistificar temas sobre saúde mental e psiquiatria.
+                    </p>
+                    <p className="text-lg text-justify">
+                      Se tiver alguma dúvida, sugestão ou consideração sobre o conteúdo, sinta-se à vontade para entrar em contato. Estou à disposição.
+                    </p>
+                  </div>
+                  <div className="bg-primary relative">
+                    <img 
+                      src="/lovable-uploads/7b3804b9-d724-40d9-916b-c182eef16487.png"
+                      alt="Dr. Matheus Casquer" 
+                      className="w-full h-full object-cover aspect-[4/3]"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
