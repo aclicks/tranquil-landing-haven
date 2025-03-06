@@ -35,22 +35,36 @@ const Sobre = () => {
       {/* Content */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-nicholas text-primary mb-8 opacity-0 animate-fade-up">
               Formação e Trajetória
             </h2>
-            <div className="prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-justify leading-relaxed mb-4">
-                Sou natural de São José do Rio Preto, interior do estado de São Paulo. Aos 18 anos, 
-                fui aprovado no vestibular de Medicina da Universidade Federal de Mato Grosso do Sul (UFMS), 
-                em Campo Grande – MS, ingressando no curso em 2013.
-              </p>
-              <p className="text-justify leading-relaxed mb-4">
-                Logo nos primeiros anos da graduação, a Psiquiatria despertou meu interesse e pareceu um 
-                caminho natural a ser seguido em minha carreira. Participei de diversas atividades, coordenei a Liga 
-                Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
-                para essa área.
-              </p>
+            
+            <div className="flex flex-col md:flex-row items-center gap-8 mb-10">
+              <div className="md:w-1/3 opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+                <img 
+                  src="/lovable-uploads/b5ee5e2b-e09f-438b-8ceb-5077d9cca25a.png" 
+                  alt="Dr. Matheus Casquer sorrindo" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+              <div className="md:w-2/3 prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <p className="text-justify leading-relaxed mb-4">
+                  Sou natural de São José do Rio Preto, interior do estado de São Paulo. Aos 18 anos, 
+                  fui aprovado no vestibular de Medicina da Universidade Federal de Mato Grosso do Sul (UFMS), 
+                  em Campo Grande – MS, ingressando no curso em 2013.
+                </p>
+                <p className="text-justify leading-relaxed mb-4">
+                  Logo nos primeiros anos da graduação, a Psiquiatria despertou meu interesse e pareceu um 
+                  caminho natural a ser seguido em minha carreira. Participei de diversas atividades, coordenei a Liga 
+                  Acadêmica de Psiquiatria da universidade, organizei simpósios e direcionei minha formação 
+                  para essa área.
+                </p>
+              </div>
+            </div>
+            
+            <div className="prose prose-lg text-accent-dark max-w-none opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <p className="text-justify leading-relaxed mb-4">
                 Após concluir a graduação, iniciei minha atuação na rede pública de saúde mental (SUS). 
                 Trabalhei inicialmente como clínico assistente no CAPS III Adulto, no CAPS Infantojuvenil 
