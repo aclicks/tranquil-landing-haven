@@ -218,7 +218,7 @@ const Psiquiatria = () => {
                   className="prose prose-lg max-w-none bg-white rounded-xl shadow-md p-8 md:p-12 opacity-0 animate-fade-up"
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-8">
                     <img 
                       src="/lovable-uploads/a5033a84-10f4-4925-ae81-feb9f7dc314c.png" 
                       alt="Logo" 
@@ -226,12 +226,14 @@ const Psiquiatria = () => {
                     />
                     <h2 className="font-nicholas text-primary text-3xl md:text-4xl mb-0">{article.title}</h2>
                   </div>
-                  {article.content.map((paragraph, i) => (
-                    <p key={i} className={i === 0 || i === 1 ? "font-semibold text-lg" : ""}>
-                      {paragraph}
-                    </p>
-                  ))}
-                  <div className="mt-8">
+                  <div className="space-y-6 text-justify leading-relaxed">
+                    {article.content.map((paragraph, i) => (
+                      <p key={i} className={`${i === 0 || i === 1 ? "font-semibold text-lg" : ""} tracking-normal`}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="mt-10">
                     <button
                       onClick={() => handleWhatsAppClick("Olá, gostaria de agendar uma consulta.")}
                       className="inline-flex items-center gap-2 bg-primary text-background px-6 py-3 rounded-lg hover:bg-accent transition-colors duration-300"
