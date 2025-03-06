@@ -6,38 +6,32 @@ import { Link, useLocation } from "react-router-dom";
 const allArticles = [
   {
     id: 1,
-    title: "Depressão: Muito Além da Tristeza",
-    excerpt: "A depressão é uma condição que afeta milhões de pessoas ao redor do mundo. Entenda os sintomas, causas e tratamentos disponíveis.",
-    imageUrl: "/placeholder.svg",
+    title: "Depressão: Muito além de Fraqueza ou Escolha",
+    excerpt: "Por que alguém que tem uma vida aparentemente boa sente um vazio tão grande que nada parece ter sentido? Será falta de fé? Falta de força de vontade? Apenas tristeza passageira?",
+    imageUrl: "/lovable-uploads/5214b07d-2dde-4da8-80c0-0ca51479223a.png",
   },
   {
     id: 2,
-    title: "Ansiedade na Era Digital",
-    excerpt: "Como o uso excessivo de tecnologia e redes sociais pode contribuir para transtornos de ansiedade e estratégias para lidar com isso.",
+    title: "Ansiedade: Quando a razão conflita com o descontrole",
+    excerpt: "Algumas pessoas sentem uma angústia constante, mesmo sem motivo aparente. O coração dispara, a respiração fica curta e a mente parece presa em um turbilhão de preocupações que nunca cessam.",
     imageUrl: "/placeholder.svg",
   },
   {
     id: 3,
-    title: "TDAH em Adultos",
-    excerpt: "O Transtorno de Déficit de Atenção e Hiperatividade não afeta apenas crianças. Saiba como identificar e tratar o TDAH na vida adulta.",
+    title: "TDAH: Desatenção, Impulsividade ou Algo Além?",
+    excerpt: "A luta para manter o foco, mesmo quando se quer prestar atenção. Por que alguns parecem estar sempre um passo atrás, esquecendo prazos, perdendo objetos e interrompendo conversas sem perceber?",
     imageUrl: "/placeholder.svg",
   },
   {
     id: 4,
-    title: "Burnout: Quando o Trabalho Adoece",
-    excerpt: "O esgotamento profissional é cada vez mais comum no mundo corporativo. Conheça os sinais, fatores de risco e formas de prevenção.",
+    title: "Autismo: Singularidade, Não Deficiência",
+    excerpt: "Algumas crianças evitam o contato visual. Outras parecem alheias ao que acontece ao redor. Há aquelas que reagem intensamente a sons, toques ou pequenas mudanças na rotina.",
     imageUrl: "/placeholder.svg",
   },
   {
     id: 5,
-    title: "Sono e Saúde Mental",
-    excerpt: "A qualidade do sono tem impacto direto na saúde mental. Descubra como melhorar seus hábitos de sono e beneficiar sua mente.",
-    imageUrl: "/placeholder.svg",
-  },
-  {
-    id: 6,
-    title: "Transtornos Alimentares",
-    excerpt: "Uma análise sobre anorexia, bulimia e compulsão alimentar, seus impactos psicológicos e abordagens terapêuticas.",
+    title: "Transtorno de Personalidade Borderline: Entre a Intensidade e a Ruptura",
+    excerpt: "A dor de quem vive com Transtorno de Personalidade Borderline (TPB) não se explica com palavras simples. É um estado constante de transbordamento, onde emoções parecem não ter limites.",
     imageUrl: "/placeholder.svg",
   }
 ];
@@ -150,7 +144,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Conteúdos Section (Previously Psychiatry) */}
+      {/* Conteúdos Section */}
       <section id="conteudos" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -168,7 +162,7 @@ const Index = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {articles.map((article, index) => (
+              {articles.slice(0, 3).map((article, index) => (
                 <div 
                   key={article.id}
                   className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow opacity-0 animate-fade-up"
