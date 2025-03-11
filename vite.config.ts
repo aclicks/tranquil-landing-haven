@@ -10,7 +10,19 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/", // Add proper base URL
+  base: "/", // Base URL for GitHub Pages
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        // Ensure proper MIME types for JS modules
+        entryFileNames: "assets/[name].[hash].js",
+        chunkFileNames: "assets/[name].[hash].js",
+        assetFileNames: "assets/[name].[hash].[ext]"
+      }
+    }
+  },
   plugins: [
     react(),
     mode === 'development' &&
