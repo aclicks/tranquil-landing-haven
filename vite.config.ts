@@ -9,6 +9,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    headers: {
+      'Content-Type': {
+        '.js': 'text/javascript',
+        '.mjs': 'text/javascript',
+        '.wasm': 'application/wasm',
+      },
+    },
   },
   base: "/", // Base URL for GitHub Pages
   build: {
