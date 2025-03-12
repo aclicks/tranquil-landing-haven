@@ -1,23 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Matheus Casquer - Psychiatric Care</title>
-    <meta name="description" content="Professional psychiatric care with Dr. Matheus Casquer" />
+    <title>Dr. Matheus Casquer - Médico Psiquiatra</title>
+    <meta name="description" content="Médico Psiquiatra Dr. Matheus Casquer" />
     <meta name="author" content="Dr. Matheus Casquer" />
-    <meta property="og:image" content="/og-image.png" />
-    
+    <meta property="og:image" content="./og-image.png" />
+     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/lovable-uploads/c220cf52-941d-41f9-8660-7b3ba55d9d81.png" />
-    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="/lovable-uploads/c220cf52-941d-41f9-8660-7b3ba55d9d81.png" />
-    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="/lovable-uploads/9dcd9c6a-f5ef-48dd-b238-cc0b54019be4.png" />
-    
+    <link rel="icon" type="image/png" href="./lovable-uploads/c220cf52-941d-41f9-8660-7b3ba55d9d81.png" />
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="./lovable-uploads/c220cf52-941d-41f9-8660-7b3ba55d9d81.png" />
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="./lovable-uploads/9dcd9c6a-f5ef-48dd-b238-cc0b54019be4.png" />
+     
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/okq6gnd.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
-    
+     
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -25,8 +24,8 @@
       // https://github.com/rafgraph/spa-github-pages
       (function(l) {
         if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
               l.pathname.slice(0, -1) + decoded + l.hash
@@ -39,7 +38,9 @@
   <body>
     <div id="root"></div>
     <!-- Load scripts in correct order with proper types -->
-    <script src="https://cdn.gpteng.co/gptengineer.js"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      import "https://cdn.gpteng.co/gptengineer.js";
+    </script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
