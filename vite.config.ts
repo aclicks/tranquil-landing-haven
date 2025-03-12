@@ -9,9 +9,6 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    headers: {
-      "Content-Type": "text/javascript; charset=utf-8",
-    },
   },
   base: "/", // Base URL for GitHub Pages
   build: {
@@ -19,7 +16,6 @@ export default defineConfig(({ mode }) => ({
     assetsDir: "assets",
     rollupOptions: {
       output: {
-        // Ensure proper MIME types for JS modules
         entryFileNames: "assets/[name].[hash].js",
         chunkFileNames: "assets/[name].[hash].js",
         assetFileNames: "assets/[name].[hash].[ext]",
