@@ -38,8 +38,9 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Load scripts in correct order -->
-    <script src="https://cdn.gpteng.co/gptengineer.js"></script>
-    <script type="module" src="./src/main.tsx"></script>
+    <!-- The gptengineer.js script must be loaded as a regular script, not a module -->
+    <script nomodule src="https://cdn.gpteng.co/gptengineer.js"></script>
+    <!-- The main application script must be loaded as a module -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
